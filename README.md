@@ -25,6 +25,12 @@ npm run build
 
 The site is configured with `output: "export"` for static deployment.
 
+## GitHub Pages
+
+This repo now includes a GitHub Pages workflow at [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml).
+
+Use GitHub repository settings to set Pages source to `GitHub Actions`. The workflow builds the site and deploys the generated `out/` directory, which avoids the root-level `404` issue you get if Pages tries to serve the repository source files directly.
+
 ## Content Editing
 
 Most portfolio content lives in [`lib/site-data.ts`](./lib/site-data.ts):
