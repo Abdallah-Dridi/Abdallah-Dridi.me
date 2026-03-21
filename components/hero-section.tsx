@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 import { heroData } from "@/lib/site-data";
 
@@ -15,7 +16,7 @@ export function HeroSection() {
       <div className="pointer-events-none absolute left-[8%] top-[18%] h-48 w-48 rounded-full bg-gold/8 blur-3xl" />
       <div className="pointer-events-none absolute bottom-[20%] right-[10%] h-72 w-72 rounded-full bg-paper/[0.03] blur-3xl" />
 
-      <div className="mx-auto grid w-full max-w-[1440px] items-end gap-12 lg:grid-cols-[minmax(0,1fr)_220px] xl:grid-cols-[minmax(0,1fr)_260px]">
+      <div className="mx-auto grid w-full max-w-[1440px] items-end gap-12 lg:grid-cols-[minmax(0,1fr)_320px] xl:grid-cols-[minmax(0,1fr)_360px]">
         <div className="min-w-0 space-y-10">
           <div className="space-y-4">
             <p className="mono-label text-paper/65">{heroData.eyebrow}</p>
@@ -79,12 +80,31 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.22 }}
-          className="justify-self-end lg:self-end"
+          className="flex w-full max-w-[340px] flex-col gap-5 justify-self-center sm:max-w-[380px] lg:justify-self-end lg:self-end"
         >
+          <div className="hero-portrait-shell">
+            <div className="hero-portrait-frame">
+              <Image
+                src="/images/abdallah-portrait.jpg"
+                alt="Abdallah Dridi examining hardware."
+                width={2680}
+                height={2466}
+                priority
+                className="hero-portrait-image"
+                sizes="(max-width: 1024px) 80vw, 360px"
+              />
+              <div aria-hidden="true" className="hero-portrait-overlay" />
+            </div>
+            <div className="hero-portrait-caption">
+              <span className="mono-label text-gold">Field Record</span>
+              <span className="mono-label text-paper/44">Portrait / 2026</span>
+            </div>
+          </div>
+
           <a
             href="#manifesto"
             data-cursor="link"
-            className="group inline-flex items-center gap-4 text-[10px] uppercase tracking-[0.35em] text-paper/60"
+            className="group inline-flex items-center gap-4 self-end text-[10px] uppercase tracking-[0.35em] text-paper/60"
           >
             <span>Scroll to continue</span>
             <span className="relative block h-16 w-px overflow-hidden bg-white/12">
