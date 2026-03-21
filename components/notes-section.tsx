@@ -16,12 +16,12 @@ export function NotesSection() {
             key={note.index}
             variant="soft"
             delay={index * 0.06}
-            className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-6"
+            className="min-w-0 rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-6"
           >
             <p className="mono-label text-gold">{note.index}</p>
             <p
               data-cursor="text"
-              className="mt-5 max-w-[32ch] font-serif text-[1.45rem] italic leading-[1.35] text-paper"
+              className="mt-5 max-w-[30ch] font-serif text-[1.28rem] italic leading-[1.42] text-paper"
             >
               {note.text}
             </p>

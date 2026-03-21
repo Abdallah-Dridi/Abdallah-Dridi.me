@@ -3,15 +3,17 @@ export type NavItem = {
   href: string;
 };
 
-export type Investigation = {
+export type Project = {
   index: string;
   title: string;
-  format: string;
-  year: string;
+  status?: string;
+  meta?: string;
   summary: string;
-  motive: string;
-  inquiry: string;
+  detail: string;
   tags: string[];
+  href?: string;
+  isExternal?: boolean;
+  interactive?: boolean;
 };
 
 export type Note = {
@@ -22,132 +24,155 @@ export type Note = {
 export const navItems: NavItem[] = [
   { label: "Method", href: "#manifesto" },
   { label: "Current", href: "#identity" },
-  { label: "Systems", href: "#systems" },
+  { label: "Work", href: "#systems" },
   { label: "Notes", href: "#notes" },
   { label: "Contact", href: "#contact" }
 ];
 
 export const heroData = {
-  eyebrow: "Cybersecurity Engineering / Systems Observation / 2026",
-  lead: "Reading systems by their traces, their defaults, and the moments where they stop behaving politely.",
+  eyebrow: "Cybersecurity Engineering Student / Blue-Team Bias / 2026",
+  lead: "I build and study systems that make more sense under inspection than they do at first glance.",
   metadata: [
-    "Field: cybersecurity engineering student",
-    "Current orientation: blue-team / SOC-side thinking",
-    "Certifications: AWS SAA / eJPT / RHCSA"
+    "Current lens: blue-team / SOC-side thinking",
+    "Certifications: AWS SAA / eJPT / RHCSA",
+    "Ground: cloud labs, Linux, packet inspection, web security"
   ],
   quickLinks: [
-    { label: "Enter the dossier", href: "#manifesto" },
-    { label: "GitHub", href: "https://github.com/Abdallah-Dridi" }
+    { label: "Selected work", href: "#systems" },
+    { label: "GitHub", href: "https://github.com/Abdallah-Dridi" },
+    {
+      label: "LinkedIn",
+      href: "https://linkedin.com/in/abdallah-dridi-93589a184"
+    }
   ]
 };
 
 export const manifestoData = {
   heading:
-    "I am most interested in the moment a system stops looking finished and starts revealing how it actually works.",
+    "I trust traces, flow, and failure modes more than polished surfaces.",
   body: [
-    "Security, to me, is not branding, posture, or a fixed badge. It is a practice of attention. Watch the signal. Question the defaults. Follow the sequence underneath the interface until the surface story stops being enough.",
-    "That is why my work stays exploratory. I move through environments, controls, telemetry, and operating systems with the same intent: understand what is happening beneath the visible layer, and why."
+    "That shows up in the work I keep returning to: cloud lab isolation, vulnerability tracking, packet inspection, and scan pipelines. I like systems that reveal their assumptions once you watch the sequence closely enough."
   ],
-  attribution: "Working principle, not slogan."
+  attribution: "Observation before assumption."
 };
 
 export const identityData = {
   lead:
-    "I’m a cybersecurity engineering student with a present bias toward blue-side analysis and SOC thinking, but I do not treat one specialty as a permanent identity. The work is deliberately non-linear.",
+    "I’m a cybersecurity engineering student with a current bias toward blue-team work, analyst context, and operational clarity.",
   paragraphs: [
-    "I study systems by interrogating their internals: where privilege collects, where logging becomes narrative, where convenience quietly introduces risk, and where operational knowledge sharpens security judgment.",
-    "The goal is not to perform a label. It is to build a way of seeing that holds up across changing tooling, environments, and problem spaces."
+    "I do not want to flatten myself into one label too early. I move between cloud, Linux, web security, telemetry, and packet analysis, then keep the parts that improve how I investigate and defend systems.",
+    "What I’m looking for is straightforward: environments where careful reading, technical curiosity, and disciplined execution are useful, not ornamental."
   ],
   callouts: [
     {
-      label: "Discipline",
-      value: "Cybersecurity engineering",
-      note: "Student, builder, operator-in-training"
+      label: "Current focus",
+      value: "Blue-team / SOC thinking",
+      note: "Signal triage, analyst context, visibility, response"
     },
     {
-      label: "Current bias",
-      value: "Blue-team / SOC-side attention",
-      note: "Detection logic, context, and sequence"
+      label: "Operating ground",
+      value: "Cloud, Linux, and web",
+      note: "AWS labs, service behavior, permissions, automation"
     },
     {
-      label: "Approach",
-      value: "Non-linear exploration",
-      note: "Cloud, Linux, telemetry, identity"
+      label: "Working bias",
+      value: "Study before certainty",
+      note: "Defaults, sequence, failure paths, evidence"
     }
   ],
   certifications: ["AWS SAA", "eJPT", "RHCSA"]
 };
 
-export const investigations: Investigation[] = [
+export const projects: Project[] = [
   {
     index: "01",
-    title: "Signal Triage",
-    format: "Investigation",
-    year: "Current line of work",
+    title: "Orchestryx",
+    status: "In Progress",
     summary:
-      "A continuing focus on how telemetry becomes judgment during alert review: moving from isolated events to coherent incident narratives.",
-    motive:
-      "What mattered here was learning to read past noise. Blue-side work becomes useful when the signal is arranged into sequence instead of treated as a dashboard artifact.",
-    inquiry:
-      "I was trying to understand what separates raw visibility from actual analyst clarity.",
-    tags: ["SIEM thinking", "Alert context", "Log analysis"]
+      "Secure cloud lab orchestration for CTF events, training programs, and cyber ranges.",
+    detail:
+      "Built around reproducible AWS environments that can be provisioned on demand without treating isolation as an afterthought.",
+    tags: ["AWS", "Terraform", "Docker", "Kubernetes"],
+    interactive: false
   },
   {
     index: "02",
-    title: "Cloud Surface Audit",
-    format: "Environment Study",
-    year: "AWS-informed exploration",
+    title: "OBSEC",
     summary:
-      "An ongoing examination of cloud posture through identity boundaries, public exposure, and the operational cost of convenience-first configuration.",
-    motive:
-      "This matters because cloud literacy is only half-finished until it becomes attack-surface literacy.",
-    inquiry:
-      "I was trying to understand where permission sprawl, weak defaults, and architecture shortcuts begin to reshape risk.",
-    tags: ["AWS", "IAM", "Configuration review"]
+      "Privacy-first ecosystem for peer-to-peer communication and anonymous value exchange.",
+    detail:
+      "Designed around the premise that privacy should live in the architecture itself, not in optional settings layered over it.",
+    tags: ["Cryptography", "P2P", "Privacy-by-design"],
+    interactive: false
   },
   {
     index: "03",
-    title: "Linux As Substrate",
-    format: "Operational Practice",
-    year: "RHCSA-backed discipline",
+    title: "OWASP Top 10 Scanner",
     summary:
-      "A systems-first thread built around Linux administration, services, permissions, automation, and recovery under pressure.",
-    motive:
-      "Security reasoning improves when the underlying platform is not abstract. Knowing how systems are operated changes how they are defended.",
-    inquiry:
-      "I was trying to understand how machines fail quietly before they fail loudly.",
-    tags: ["RHEL", "Shell", "Systemd", "Hardening"]
+      "Automated web scanner that chains crawling, enumeration, injection testing, and reporting into one repeatable pipeline.",
+    detail:
+      "The point was to operationalize the OWASP Top 10 into real scan flow: discover the surface first, then feed targeted testing instead of running tools in isolation.",
+    tags: ["Python", "sqlmap", "gospider", "hakrawler"],
+    href: "https://github.com/Abdallah-Dridi/AuWASP",
+    isExternal: true,
+    interactive: true
+  },
+  {
+    index: "04",
+    title: "PatchStash",
+    summary:
+      "Vulnerability tracking dashboard for teams that need CVEs, remediation state, and ownership in one place.",
+    detail:
+      "Built to make vulnerability management readable instead of spreadsheet-bound, with public data and remediation context presented as operational work rather than passive inventory.",
+    tags: ["Symfony", "Twig", "Docker", "CVE tracking"],
+    href: "https://github.com/Abdallah-Dridi/PatchStash",
+    isExternal: true,
+    interactive: true
+  },
+  {
+    index: "05",
+    title: "WireCat",
+    meta: "Collaborative / fork-derived",
+    summary:
+      "Network packet analysis toolkit for real-time capture, filtering, and inspection.",
+    detail:
+      "Featured here as collaborative work centred on analyst workflow, protocol inspection, and export-friendly traffic analysis.",
+    tags: ["JavaFX", "PCAP", "Packet inspection", "Collaborative"],
+    href: "https://github.com/Abdallah-Dridi/WireCat",
+    isExternal: true,
+    interactive: true
   }
 ];
 
 export const notes: Note[] = [
   {
     index: "A1",
-    text: "Logs are not neutral. They are evidence filtered through design decisions."
+    text: "Packet traces change everything once you stop reading protocols in isolation and start reading sequence."
   },
   {
     index: "A2",
-    text: "A quiet system is not always a healthy system. Sometimes it is just blind."
+    text: "A scanner is only useful if enumeration is disciplined before exploitation begins."
   },
   {
     index: "A3",
-    text: "The question is rarely whether a control exists. The question is what it fails to notice."
+    text: "Cloud automation stops being impressive the moment isolation becomes optional."
   },
   {
     index: "A4",
-    text: "Operational fluency turns security from opinion into diagnosis."
+    text: "A vulnerability list without remediation context is just backlog theatre."
   },
   {
     index: "A5",
-    text: "I trust interfaces less after I understand the machinery underneath them."
+    text: "Linux keeps me honest because it exposes bad assumptions faster than polished tooling does."
   }
 ];
 
 export const contactData = {
-  heading: "If the work matters, reach out directly.",
+  heading: "For security engineering, blue-team, or systems work, reach out directly.",
   body:
-    "I’m interested in security engineering, blue-team, and technically rigorous early-career roles that value curiosity, systems thinking, and disciplined execution.",
+    "I’m interested in early-career roles where investigation, operational context, and careful execution matter more than buzzwords.",
   email: "dridi.abdallah1@gmail.com",
   github: "https://github.com/Abdallah-Dridi",
+  linkedin: "https://linkedin.com/in/abdallah-dridi-93589a184",
   domain: "https://abdallah-dridi.me"
 };

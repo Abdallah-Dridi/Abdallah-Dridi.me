@@ -12,14 +12,14 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://abdallah-dridi.me"),
   title: "Abdallah Dridi | Systems, Signal, and Security",
   description:
-    "A cinematic editorial portfolio for Abdallah Dridi, a cybersecurity engineering student exploring systems, signal, cloud posture, and blue-team thinking.",
+    "Editorial portfolio of Abdallah Dridi, a cybersecurity engineering student focused on blue-team thinking, cloud labs, vulnerability tracking, and packet inspection.",
   alternates: {
     canonical: "/"
   },
   openGraph: {
     title: "Abdallah Dridi | Systems, Signal, and Security",
     description:
-      "Cybersecurity engineering, blue-team attention, and systems explored beneath the surface.",
+      "Cybersecurity engineering, blue-team attention, and real work across cloud labs, scanning, vulnerability tracking, and packet inspection.",
     url: "https://abdallah-dridi.me",
     siteName: "Abdallah Dridi",
     locale: "en_US",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Abdallah Dridi | Systems, Signal, and Security",
     description:
-      "Cybersecurity engineering, blue-team attention, and systems explored beneath the surface."
+      "Cybersecurity engineering, blue-team attention, and real work across cloud labs, scanning, vulnerability tracking, and packet inspection."
   }
 };
 

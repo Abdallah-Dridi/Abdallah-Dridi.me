@@ -15,18 +15,18 @@ export function HeroSection() {
       <div className="pointer-events-none absolute left-[8%] top-[18%] h-48 w-48 rounded-full bg-gold/8 blur-3xl" />
       <div className="pointer-events-none absolute bottom-[20%] right-[10%] h-72 w-72 rounded-full bg-paper/[0.03] blur-3xl" />
 
-      <div className="mx-auto grid w-full max-w-[1440px] items-end gap-12 lg:grid-cols-[minmax(0,1fr)_260px]">
-        <div className="space-y-10">
+      <div className="mx-auto grid w-full max-w-[1440px] items-end gap-12 lg:grid-cols-[minmax(0,1fr)_220px] xl:grid-cols-[minmax(0,1fr)_260px]">
+        <div className="min-w-0 space-y-10">
           <div className="space-y-4">
             <p className="mono-label text-paper/65">{heroData.eyebrow}</p>
             <motion.div
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.1 }}
-              className="space-y-2"
+              className="space-y-1 sm:space-y-2"
             >
               <span className="display-title block text-paper">Abdallah</span>
-              <span className="display-title display-outline block leading-[0.86] text-transparent">
+              <span className="display-title display-outline block leading-[0.8] text-transparent">
                 Dridi
               </span>
             </motion.div>
@@ -36,23 +36,23 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.12 }}
-            className="grid gap-8 lg:grid-cols-[minmax(0,560px)_minmax(0,1fr)]"
+            className="grid gap-8 lg:grid-cols-[minmax(0,520px)_minmax(0,1fr)]"
           >
-            <div>
+            <div className="min-w-0">
               <p
                 data-cursor="text"
-                className="max-w-[26ch] text-balance font-serif text-[clamp(1.55rem,2vw,2.25rem)] italic leading-[1.08] text-paper"
+                className="max-w-[24ch] font-serif text-[clamp(1.38rem,2vw,2.02rem)] italic leading-[1.14] text-paper"
               >
                 {heroData.lead}
               </p>
             </div>
 
-            <div className="flex flex-col justify-end gap-6 lg:items-end">
+            <div className="min-w-0 flex flex-col justify-end gap-6 lg:items-end">
               <ul className="space-y-3 text-[11px] uppercase tracking-[0.24em] text-paper/58">
                 {heroData.metadata.map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span className="mt-[0.55rem] h-px w-8 bg-gold/60" />
-                    <span className="max-w-[28ch] text-balance">{item}</span>
+                    <span className="max-w-[30ch]">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -79,7 +79,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.22 }}
-          className="justify-self-end"
+          className="justify-self-end lg:self-end"
         >
           <a
             href="#manifesto"

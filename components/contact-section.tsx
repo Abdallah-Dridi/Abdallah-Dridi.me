@@ -16,23 +16,23 @@ export function ContactSection() {
             </div>
 
             <div className="grid gap-10 xl:grid-cols-[minmax(0,1fr)_280px]">
-              <div className="space-y-8">
+              <div className="min-w-0 space-y-8">
                 <Reveal>
-                  <h2 className="max-w-[12ch] text-balance font-serif text-[clamp(2.8rem,5vw,5.6rem)] italic leading-[0.94] text-paper">
+                  <h2 className="max-w-[11ch] font-serif text-[clamp(2.35rem,4.5vw,4.8rem)] italic leading-[0.98] text-paper">
                     {contactData.heading}
                   </h2>
                 </Reveal>
                 <Reveal variant="soft">
                   <p
                     data-cursor="text"
-                    className="max-w-[38rem] font-serif text-[1.18rem] leading-[1.8] text-paper/74"
+                    className="max-w-[34rem] font-serif text-[1.08rem] leading-[1.8] text-paper/74"
                   >
                     {contactData.body}
                   </p>
                 </Reveal>
               </div>
 
-              <Reveal variant="soft" className="rounded-[1.6rem] border border-white/10 bg-white/[0.03] p-6">
+              <Reveal variant="soft" className="min-w-0 rounded-[1.6rem] border border-white/10 bg-white/[0.03] p-6">
                 <div className="space-y-5">
                   <div>
                     <p className="mono-label text-gold">Email</p>
@@ -54,6 +54,18 @@ export function ContactSection() {
                       className="mt-3 block font-serif text-xl text-paper transition-colors hover:text-gold"
                     >
                       github.com/Abdallah-Dridi
+                    </a>
+                  </div>
+                  <div className="border-t border-white/10 pt-5">
+                    <p className="mono-label text-gold">LinkedIn</p>
+                    <a
+                      href={contactData.linkedin}
+                      target="_blank"
+                      rel="noreferrer"
+                      data-cursor="link"
+                      className="mt-3 block break-words font-serif text-xl text-paper transition-colors hover:text-gold"
+                    >
+                      linkedin.com/in/abdallah-dridi-93589a184
                     </a>
                   </div>
                   <div className="border-t border-white/10 pt-5">
