@@ -19,13 +19,63 @@ export const fr = {
     menuAria: "Ouvrir ou fermer le menu de navigation",
   },
   intro: {
-    overline: "Voici Abdallah.",
+    overline: "Voici Abdallah · Ingénieur cybersécurité / 2027",
     title: "La sécurité qui s’exécute seule.",
     supporting:
-      "Un ingénieur. Quatre configurations. Automatiser la sécurité, du signal à l’infrastructure.",
+      "Une alerte entre. Le contexte s’assemble. L’infrastructure répond. Le système libère l’analyste du travail répétitif.",
     availability: "Disponible en février 2027 · PFE de 6 mois · France",
-    phaseLabel: "Aperçu des fondations",
-    phaseNote: "La révélation au défilement arrive à la prochaine phase.",
+    phaseLabel: "La boucle de défense autonome",
+    phaseNote: "Du signal brut à la réponse maîtrisée.",
+    scroll: "Suivre le signal",
+  },
+  system: {
+    aria: "Système de sécurité autonome reliant détection, IA, cloud et automatisation",
+    core: "Noyau sécurité",
+    status: "Système prêt",
+    mark: "AD",
+    edition: "27",
+    nodes: {
+      detect: "Détecter",
+      reason: "Raisonner",
+      isolate: "Isoler",
+      automate: "Automatiser",
+    },
+    layers: {
+      signal: "01 / Plan signal",
+      intelligence: "02 / Plan intelligence",
+      infrastructure: "03 / Plan cloud",
+      response: "04 / Plan réponse",
+    },
+  },
+  story: {
+    eyebrow: "Un signal. Quatre transformations.",
+    title: "La sécurité n’est pas un dashboard. C’est une séquence vivante.",
+    lead:
+      "Abdallah construit les liens entre détection, renseignement, infrastructure isolée et réponse reproductible.",
+    stages: [
+      {
+        label: "Signal",
+        title: "Voir ce qui a changé.",
+        body: "Commencer par les preuves : alertes, paquets, indicateurs et comportements associés.",
+      },
+      {
+        label: "Intelligence",
+        title: "Donner du contexte au signal.",
+        body: "Enrichir le signal avec la Threat Intelligence et employer l’IA pour assister l’analyse sans fabriquer de certitude.",
+      },
+      {
+        label: "Infrastructure",
+        title: "Contenir l’inconnu.",
+        body: "Provisionner des environnements cloud isolés pour exécuter les activités de sécurité sans compromettre le système global.",
+      },
+      {
+        label: "Réponse",
+        title: "Transformer le jugement en flux.",
+        body: "Automatiser les étapes répétables afin de préserver le contrôle de l’analyste tout en éliminant le travail routinier.",
+      },
+    ],
+    configurationEyebrow: "Choisir un mode opératoire",
+    configurationTitle: "Un ingénieur. Quatre accès au même système.",
   },
   configurations: {
     blue: { name: "BLUE", description: "SOC & détection" },
@@ -103,4 +153,3 @@ export const fr = {
     arabic: "Arabe",
   },
 } as const satisfies Dictionary;
-

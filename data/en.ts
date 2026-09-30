@@ -17,13 +17,63 @@ export const en = {
     menuAria: "Toggle navigation menu",
   },
   intro: {
-    overline: "Introducing Abdallah.",
+    overline: "Introducing Abdallah · Security engineer / 2027",
     title: "Security that runs itself.",
     supporting:
-      "One engineer. Four configurations. Security automation from signal to infrastructure.",
+      "An alert enters. Context assembles. Infrastructure responds. The system gets out of the analyst’s way.",
     availability: "Available February 2027 · 6-month PFE · France",
-    phaseLabel: "Foundation preview",
-    phaseNote: "Scroll-led reveal in the next build phase.",
+    phaseLabel: "The autonomous defense loop",
+    phaseNote: "From raw signal to controlled response.",
+    scroll: "Follow the signal",
+  },
+  system: {
+    aria: "Autonomous security system connecting detection, AI, cloud, and automation",
+    core: "Security core",
+    status: "System ready",
+    mark: "AD",
+    edition: "27",
+    nodes: {
+      detect: "Detect",
+      reason: "Reason",
+      isolate: "Isolate",
+      automate: "Automate",
+    },
+    layers: {
+      signal: "01 / Signal plane",
+      intelligence: "02 / Intelligence plane",
+      infrastructure: "03 / Cloud plane",
+      response: "04 / Response plane",
+    },
+  },
+  story: {
+    eyebrow: "One signal. Four transformations.",
+    title: "Security is not a dashboard. It is a living sequence.",
+    lead:
+      "Abdallah builds the connective tissue between detection, intelligence, isolated infrastructure, and repeatable response.",
+    stages: [
+      {
+        label: "Signal",
+        title: "See what changed.",
+        body: "Start with evidence: alerts, packets, indicators, and the behavior behind them.",
+      },
+      {
+        label: "Intelligence",
+        title: "Give the signal context.",
+        body: "Enrich it with Threat Intelligence and use AI where it can assist analysis without inventing certainty.",
+      },
+      {
+        label: "Infrastructure",
+        title: "Contain the unknown.",
+        body: "Provision isolated cloud environments where security work can run without compromising the wider system.",
+      },
+      {
+        label: "Response",
+        title: "Turn judgment into flow.",
+        body: "Automate repeatable steps so analysts keep control while routine work moves on its own.",
+      },
+    ],
+    configurationEyebrow: "Choose an operating mode",
+    configurationTitle: "One engineer. Four ways into the same system.",
   },
   configurations: {
     blue: { name: "BLUE", description: "SOC & detection" },
