@@ -1,3 +1,15 @@
 export function FilmGrain() {
-  return <div aria-hidden="true" className="film-grain" />;
+  return (
+    <svg className="film-grain" aria-hidden="true">
+      <filter id="film-grain-filter">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.9"
+          numOctaves="3"
+          stitchTiles="stitch"
+        />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#film-grain-filter)" />
+    </svg>
+  );
 }

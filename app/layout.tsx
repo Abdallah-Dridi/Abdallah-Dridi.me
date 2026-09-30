@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Bebas_Neue, EB_Garamond, JetBrains_Mono } from "next/font/google";
 import type { ReactNode } from "react";
 
 import { CustomCursor } from "@/components/custom-cursor";
@@ -8,18 +9,41 @@ import { Providers } from "@/components/providers";
 
 import "./globals.css";
 
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-bebas",
+  display: "swap",
+});
+
+const ebGaramond = EB_Garamond({
+  subsets: ["latin"],
+  variable: "--font-garamond",
+  display: "swap",
+});
+
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://abdallah-dridi.me"),
-  title: "Abdallah Dridi | Systems, Signal, and Security",
+  title: "Abdallah Dridi — Cybersecurity Engineering",
   description:
-    "Editorial portfolio of Abdallah Dridi, a cybersecurity engineering student focused on blue-team thinking, cloud labs, vulnerability tracking, and packet inspection.",
+    "Portfolio of Abdallah Dridi, a cybersecurity engineering student seeking a six-month end-of-studies internship in France from February 2027.",
   alternates: {
-    canonical: "/"
+    canonical: "/",
+    languages: {
+      en: "/#en",
+      fr: "/#fr",
+    },
   },
   openGraph: {
-    title: "Abdallah Dridi | Systems, Signal, and Security",
+    title: "Abdallah Dridi — Cybersecurity Engineering",
     description:
-      "Cybersecurity engineering, blue-team attention, and real work across cloud labs, scanning, vulnerability tracking, and packet inspection.",
+      "Security that runs itself. Cybersecurity engineering across SOC, cloud, DevSecOps, and evidence-based AI security.",
     url: "https://abdallah-dridi.me",
     siteName: "Abdallah Dridi",
     locale: "en_US",
@@ -30,15 +54,16 @@ export const metadata: Metadata = {
     title: "Abdallah Dridi | Systems, Signal, and Security",
     description:
       "Cybersecurity engineering, blue-team attention, and real work across cloud labs, scanning, vulnerability tracking, and packet inspection."
-  }
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${bebasNeue.variable} ${ebGaramond.variable} ${jetBrainsMono.variable}`}
+      >
         <Providers>
-          <div className="site-backdrop" />
           <FilmGrain />
           <Navbar />
           <CustomCursor />
