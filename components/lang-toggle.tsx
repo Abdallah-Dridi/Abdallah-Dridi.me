@@ -21,7 +21,6 @@ export function LangToggle() {
             className="lang-toggle__button"
             aria-pressed={locale === option}
             onClick={() => setLocale(option)}
-            data-cursor="link"
           >
             {option.toUpperCase()}
           </button>
@@ -30,4 +29,3 @@ export function LangToggle() {
     </div>
   );
 }
-

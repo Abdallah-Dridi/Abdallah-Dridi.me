@@ -1,24 +1,25 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, EB_Garamond, JetBrains_Mono } from "next/font/google";
+import { Geist, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import type { ReactNode } from "react";
 
-import { CustomCursor } from "@/components/custom-cursor";
-import { FilmGrain } from "@/components/film-grain";
 import { Navbar } from "@/components/navbar";
 import { Providers } from "@/components/providers";
+import { content } from "@/data/content";
+import { en } from "@/data/en";
 
 import "./globals.css";
 
-const bebasNeue = Bebas_Neue({
+const instrumentSerif = Instrument_Serif({
   weight: "400",
+  style: ["normal", "italic"],
   subsets: ["latin"],
-  variable: "--font-bebas",
+  variable: "--font-instrument",
   display: "swap",
 });
 
-const ebGaramond = EB_Garamond({
+const geist = Geist({
   subsets: ["latin"],
-  variable: "--font-garamond",
+  variable: "--font-geist",
   display: "swap",
 });
 
@@ -30,9 +31,8 @@ const jetBrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://abdallah-dridi.me"),
-  title: "Abdallah Dridi — Cybersecurity Engineering",
-  description:
-    "Portfolio of Abdallah Dridi, a cybersecurity engineering student seeking a six-month end-of-studies internship in France from February 2027.",
+  title: en.seo.title,
+  description: en.seo.description,
   alternates: {
     canonical: "/",
     languages: {
@@ -41,19 +41,17 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Abdallah Dridi — Cybersecurity Engineering",
-    description:
-      "Security that runs itself. Cybersecurity engineering across SOC, cloud, DevSecOps, and evidence-based AI security.",
+    title: en.seo.title,
+    description: en.seo.description,
     url: "https://abdallah-dridi.me",
-    siteName: "Abdallah Dridi",
+    siteName: content.identity.name,
     locale: "en_US",
-    type: "website"
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abdallah Dridi | Systems, Signal, and Security",
-    description:
-      "Cybersecurity engineering, blue-team attention, and real work across cloud labs, scanning, vulnerability tracking, and packet inspection."
+    title: en.seo.title,
+    description: en.seo.description,
   },
 };
 
@@ -61,12 +59,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${bebasNeue.variable} ${ebGaramond.variable} ${jetBrainsMono.variable}`}
+        className={`${instrumentSerif.variable} ${geist.variable} ${jetBrainsMono.variable}`}
       >
         <Providers>
-          <FilmGrain />
           <Navbar />
-          <CustomCursor />
           {children}
         </Providers>
       </body>

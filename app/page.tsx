@@ -1,12 +1,12 @@
 "use client";
 
-import { SecurityCore } from "@/components/security-core";
-import { configIds } from "@/data/content";
+import { CloudFallback } from "@/components/cloud-fallback";
+import { altitudeLayers } from "@/data/layers";
 import { useI18n } from "@/lib/i18n";
 
 export default function HomePage() {
   const { dictionary } = useI18n();
-  const systemLayers = Object.values(dictionary.system.layers);
+  const previewLayers = altitudeLayers.filter(({ id }) => id !== "ground");
 
   return (
     <>
@@ -14,94 +14,76 @@ export default function HomePage() {
         {dictionary.common.skip}
       </a>
       <main id="main-content">
-        <section className="launch" id="top" aria-labelledby="launch-title">
-          <div className="launch__scanlines" aria-hidden="true" />
-          <div className="launch__frame">
-            <div className="launch__copy">
-              <p className="eyebrow">{dictionary.intro.overline}</p>
-              <h1 id="launch-title" className="launch__title">
-                {dictionary.intro.title}
-              </h1>
-              <p className="launch__lead">{dictionary.intro.supporting}</p>
-            </div>
-
-            <SecurityCore
-              ariaLabel={dictionary.system.aria}
-              core={dictionary.system.core}
-              status={dictionary.system.status}
-              mark={dictionary.system.mark}
-              edition={dictionary.system.edition}
-              nodes={dictionary.system.nodes}
-            />
-
-            <div className="launch__meta">
-              <p>{dictionary.intro.availability}</p>
-              <a href="#reveal" data-cursor="link">
-                <span>{dictionary.intro.scroll}</span>
+        <section
+          className="altitude-layer altitude-layer--ground takeoff"
+          id="takeoff"
+          aria-labelledby="takeoff-title"
+        >
+          <CloudFallback layer="ground" />
+          <div className="takeoff__content">
+            <p className="hud-label">{dictionary.hero.altitude}</p>
+            <h1 id="takeoff-title">{dictionary.hero.title}</h1>
+            <p className="takeoff__subtitle">{dictionary.hero.subtitle}</p>
+            <div className="takeoff__hud">
+              <span>{dictionary.hero.availability}</span>
+              <span className="secure-state">
                 <i aria-hidden="true" />
-              </a>
+                {dictionary.hero.fallbackStatus}
+              </span>
             </div>
           </div>
+          <a className="climb-cue" href="#flight-plan">
+            <span>{dictionary.hero.cue}</span>
+            <i aria-hidden="true" />
+          </a>
+        </section>
 
-          <div className="system-rail" aria-label={dictionary.system.aria}>
-            {systemLayers.map((layer, index) => (
-              <div className="system-rail__item" key={layer}>
-                <span>{layer}</span>
-                {index < systemLayers.length - 1 ? <i aria-hidden="true" /> : null}
+        <section className="flight-plan" id="flight-plan" aria-labelledby="flight-plan-title">
+          <div className="flight-plan__intro">
+            <p className="hud-label">{dictionary.foundation.eyebrow}</p>
+            <h2 id="flight-plan-title">{dictionary.foundation.title}</h2>
+            <p>{dictionary.foundation.lead}</p>
+          </div>
+          <p className="flight-plan__mapping hud-label">
+            {dictionary.foundation.mappingLabel}
+          </p>
+        </section>
+
+        {previewLayers.map((layer, index) => {
+          const copy = dictionary.layers[layer.id];
+
+          return (
+            <section
+              className={`altitude-layer altitude-layer--${layer.id}`}
+              id={layer.anchor}
+              aria-labelledby={`${layer.anchor}-title`}
+              key={layer.id}
+            >
+              <CloudFallback layer={layer.id} />
+              <div className="layer-preview">
+                <div className="layer-preview__telemetry">
+                  <span>{copy.altitude}</span>
+                  <span>0{index + 1}</span>
+                  <span>{dictionary.common.illustration}</span>
+                </div>
+                <article className="instrument-panel">
+                  <span className="instrument-panel__tick instrument-panel__tick--tl" />
+                  <span className="instrument-panel__tick instrument-panel__tick--tr" />
+                  <span className="instrument-panel__tick instrument-panel__tick--bl" />
+                  <span className="instrument-panel__tick instrument-panel__tick--br" />
+                  <p className="hud-label">{copy.label}</p>
+                  <h2 id={`${layer.anchor}-title`}>{copy.title}</h2>
+                  <p>{copy.body}</p>
+                </article>
+                <div className="layer-preview__altitude" aria-hidden="true">
+                  <span />
+                  <i />
+                  <span />
+                </div>
               </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="story" id="reveal" aria-labelledby="story-title">
-          <div className="story__intro">
-            <p className="eyebrow">{dictionary.story.eyebrow}</p>
-            <h2 id="story-title">{dictionary.story.title}</h2>
-            <p>{dictionary.story.lead}</p>
-          </div>
-
-          <div className="story-sequence">
-            <div className="story-sequence__line" aria-hidden="true" />
-            {dictionary.story.stages.map((stage, index) => (
-              <article className="story-stage" key={stage.label}>
-                <header>
-                  <span>0{index + 1}</span>
-                  <i aria-hidden="true" />
-                  <p>{stage.label}</p>
-                </header>
-                <h3>{stage.title}</h3>
-                <p>{stage.body}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="modes" id="configure" aria-labelledby="modes-title">
-          <div className="modes__heading">
-            <p className="eyebrow">{dictionary.story.configurationEyebrow}</p>
-            <h2 id="modes-title">{dictionary.story.configurationTitle}</h2>
-          </div>
-          <div className="mode-grid">
-            {configIds.map((id, index) => (
-              <article className={`mode-card mode-card--${id}`} key={id}>
-                <div className="mode-card__topline">
-                  <span>0{index + 1}</span>
-                  <i aria-hidden="true" />
-                </div>
-                <h3>{dictionary.configurations[id].name}</h3>
-                <p>{dictionary.configurations[id].description}</p>
-                <div className="mode-card__glyph" aria-hidden="true">
-                  <span />
-                  <span />
-                  <span />
-                </div>
-              </article>
-            ))}
-          </div>
-          <div className="future-anchor" id="specs" aria-hidden="true" />
-          <div className="future-anchor" id="compare" aria-hidden="true" />
-          <div className="future-anchor" id="contact" aria-hidden="true" />
-        </section>
+            </section>
+          );
+        })}
       </main>
     </>
   );

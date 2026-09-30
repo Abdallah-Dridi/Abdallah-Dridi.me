@@ -1,109 +1,95 @@
 export const en = {
   locale: "en",
   seo: {
-    title: "Abdallah Dridi — Cybersecurity Engineering",
+    title: "Abdallah Dridi — Cloud & AI Security Engineering",
     description:
-      "Portfolio of Abdallah Dridi, a cybersecurity engineering student seeking a six-month end-of-studies internship in France from February 2027.",
+      "I’m Abdallah Dridi, a cybersecurity engineering student building security automation across SOC, cloud, DevSecOps, and AI-assisted analysis.",
   },
   nav: {
-    home: "Abdallah Dridi",
-    reveal: "Reveal",
-    configure: "Configure",
-    specs: "Specs",
-    compare: "Compare",
-    contact: "Contact",
-    aria: "Primary navigation",
+    home: "AD / Clear skies",
     languageAria: "Choose language",
-    menuAria: "Toggle navigation menu",
-  },
-  intro: {
-    overline: "Introducing Abdallah · Security engineer / 2027",
-    title: "Security that runs itself.",
-    supporting:
-      "An alert enters. Context assembles. Infrastructure responds. The system gets out of the analyst’s way.",
-    availability: "Available February 2027 · 6-month PFE · France",
-    phaseLabel: "The autonomous defense loop",
-    phaseNote: "From raw signal to controlled response.",
-    scroll: "Follow the signal",
-  },
-  system: {
-    aria: "Autonomous security system connecting detection, AI, cloud, and automation",
-    core: "Security core",
-    status: "System ready",
-    mark: "AD",
-    edition: "27",
-    nodes: {
-      detect: "Detect",
-      reason: "Reason",
-      isolate: "Isolate",
-      automate: "Automate",
-    },
-    layers: {
-      signal: "01 / Signal plane",
-      intelligence: "02 / Intelligence plane",
-      infrastructure: "03 / Cloud plane",
-      response: "04 / Response plane",
-    },
-  },
-  story: {
-    eyebrow: "One signal. Four transformations.",
-    title: "Security is not a dashboard. It is a living sequence.",
-    lead:
-      "Abdallah builds the connective tissue between detection, intelligence, isolated infrastructure, and repeatable response.",
-    stages: [
-      {
-        label: "Signal",
-        title: "See what changed.",
-        body: "Start with evidence: alerts, packets, indicators, and the behavior behind them.",
-      },
-      {
-        label: "Intelligence",
-        title: "Give the signal context.",
-        body: "Enrich it with Threat Intelligence and use AI where it can assist analysis without inventing certainty.",
-      },
-      {
-        label: "Infrastructure",
-        title: "Contain the unknown.",
-        body: "Provision isolated cloud environments where security work can run without compromising the wider system.",
-      },
-      {
-        label: "Response",
-        title: "Turn judgment into flow.",
-        body: "Automate repeatable steps so analysts keep control while routine work moves on its own.",
-      },
-    ],
-    configurationEyebrow: "Choose an operating mode",
-    configurationTitle: "One engineer. Four ways into the same system.",
-  },
-  configurations: {
-    blue: { name: "BLUE", description: "SOC & detection" },
-    cloud: { name: "CLOUD", description: "AWS & infrastructure" },
-    pipeline: { name: "PIPELINE", description: "DevSecOps & AppSec" },
-    mind: {
-      name: "MIND",
-      description: "AI security — an emerging, evidence-based direction",
-    },
   },
   common: {
     skip: "Skip to content",
+    illustration: "Illustration",
     inProgress: "In progress",
     native: "Native",
-    downloadCv: "Download CV",
+    downloadCv: "Download my CV",
+  },
+  hero: {
+    altitude: "0 m · Takeoff",
+    title: "I’m Abdallah. I build the automation that keeps cloud skies clear.",
+    subtitle:
+      "I’m a cybersecurity engineering student working where detection, cloud infrastructure, automation, and AI meet.",
+    availability: "Available February 2027 · 6-month PFE · France",
+    cue: "Start climbing",
+    fallbackStatus: "Atmosphere fallback active",
+  },
+  foundation: {
+    eyebrow: "Phase 01 · Flight system",
+    title: "This is the route I’m building.",
+    lead:
+      "I move from the alert on the ground to the cloud above it, then into the automation and AI that help security work move faster without losing human judgment.",
+    mappingLabel: "Altitude-to-background map",
+  },
+  layers: {
+    ground: {
+      altitude: "0 m",
+      short: "Takeoff",
+      label: "Ground · Dawn",
+      title: "I start with the signal.",
+      body: "I look for what changed, what can be verified, and what deserves an analyst’s attention.",
+    },
+    soc: {
+      altitude: "FL 040",
+      short: "SOC",
+      label: "Troposphere · Control tower",
+      title: "I automate the first response.",
+      body: "At Amen Bank, I automated alert triage with Splunk SOAR playbooks inside an existing SOC, enriched alerts with MISP and VirusTotal, and integrated Gemini-assisted analysis.",
+    },
+    cloud: {
+      altitude: "FL 120",
+      short: "Cloud",
+      label: "Cloud layer · Above the clouds",
+      title: "I build isolated space for security work.",
+      body: "I built Orchestryx to provision isolated cyber-range and CTF environments asynchronously on AWS.",
+    },
+    pipeline: {
+      altitude: "FL 240",
+      short: "Pipeline",
+      label: "Jet stream · Flight path",
+      title: "I turn repeatable work into flow.",
+      body: "I connect security tools into workflows: from web discovery and testing to reports, playbooks, queues, and cloud provisioning.",
+    },
+    ai: {
+      altitude: "FL 400",
+      short: "AI",
+      label: "Stratosphere · The forecast",
+      title: "AI security is where I’m heading.",
+      body: "So far, I’ve put an LLM to work on real SOC alerts and built an LLM-and-RAG football statistics assistant. My experience is early, practical, and growing.",
+    },
+    space: {
+      altitude: "Edge of space",
+      short: "Contact",
+      label: "Landing clearance · Flight log",
+      title: "Clear skies from February 2027. Let’s talk.",
+      body: "I’m looking for a six-month end-of-studies internship in France where I can keep building useful, defensible security automation.",
+    },
   },
   experience: {
     soar: {
-      role: "Cybersecurity intern — SOC/SOAR automation",
+      role: "My SOC/SOAR automation internship",
       bullets: [
-        "Develop and adapt Splunk SOAR playbooks for automated alert triage within an existing SOC environment.",
-        "Automate Threat Intelligence enrichment through MISP and VirusTotal.",
-        "Integrate the Gemini API for LLM-assisted alert analysis.",
+        "I developed and adapted Splunk SOAR playbooks to automate alert triage inside an existing SOC environment.",
+        "I automated Threat Intelligence enrichment with MISP and VirusTotal.",
+        "I integrated the Gemini API for LLM-assisted alert analysis.",
       ],
     },
     scanner: {
-      role: "Cybersecurity intern — web vulnerability assessment",
+      role: "My web vulnerability assessment internship",
       bullets: [
-        "Build an automated OWASP Top 10 web vulnerability scanner integrating Gobuster, SQLMap, and XSStrike.",
-        "Generate HTML reports with findings, security impact, and remediation guidance.",
+        "I built an automated OWASP Top 10 web vulnerability scanner combining Gobuster, SQLMap, and XSStrike.",
+        "I generated HTML reports with findings, impact, and remediation guidance.",
       ],
     },
   },
@@ -111,37 +97,33 @@ export const en = {
     orchestryx: {
       name: "Orchestryx",
       description:
-        "Cloud-native cyber range and CTF platform with asynchronous provisioning of isolated environments.",
+        "I built a cloud-native cyber range and CTF platform that provisions isolated environments asynchronously.",
     },
     latrodectus: {
       name: "Latrodectus malware analysis",
       description:
-        "Academic triage, static analysis, and sandbox analysis of a real Windows loader sample, including IOCs, MITRE ATT&CK mapping, YARA, and detection opportunities. Findings included high .rsrc entropy and an estimated ~82% packing level.",
+        "I performed academic triage, static analysis, and sandbox analysis of a real Windows loader. I documented IOCs, MITRE ATT&CK mapping, YARA, and detection opportunities, including high .rsrc entropy and an estimated ~82% packing level.",
     },
     wirecat: {
       name: "WireCat",
       description:
-        "Real-time packet analyzer with live capture, Ethernet/IP/TCP inspection, protocol filtering, and export to .pcap, .csv, and .txt.",
+        "I built a real-time packet analyzer for live capture, Ethernet/IP/TCP inspection, protocol filtering, and export to .pcap, .csv, and .txt.",
     },
     kooretna: {
       name: "Kooretna",
       description:
-        "Football statistics assistant using the Groq API and a RAG pipeline fed by sports APIs.",
-    },
-    obsec: {
-      name: "OBSEC / AnonChat",
-      description: "Peer-to-peer, encrypted local messaging concept built with Python.",
+        "I built a football statistics assistant using the Groq API and a RAG pipeline fed by sports APIs.",
     },
     "risk-management": {
-      name: "Cybersecurity risk management",
+      name: "My cybersecurity risk-management project",
       description:
-        "Academic EBIOS and ISO 27005 risk analysis with ALE, ROSI, a project charter, WBS, PERT, and Earned Value Management.",
+        "I completed an academic EBIOS and ISO 27005 risk analysis with ALE, ROSI, a project charter, WBS, PERT, and Earned Value Management.",
     },
   },
   education: {
-    "tek-up": "Engineering degree in systems and network security",
-    schmalkalden: "Erasmus+ exchange",
-    cesi: "Academic mobility",
+    "tek-up": "I’m completing an engineering degree in systems and network security.",
+    schmalkalden: "I completed an Erasmus+ exchange.",
+    cesi: "I’m completing an academic mobility year.",
   },
   languages: {
     french: "French",
@@ -160,3 +142,4 @@ type WidenStrings<T> = T extends string
       : T;
 
 export type Dictionary = WidenStrings<typeof en>;
+

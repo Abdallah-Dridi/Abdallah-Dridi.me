@@ -1,6 +1,3 @@
-export const configIds = ["blue", "cloud", "pipeline", "mind"] as const;
-export type ConfigId = (typeof configIds)[number];
-
 export const experienceIds = ["soar", "scanner"] as const;
 export type ExperienceId = (typeof experienceIds)[number];
 
@@ -9,7 +6,6 @@ export const projectIds = [
   "latrodectus",
   "wirecat",
   "kooretna",
-  "obsec",
   "risk-management",
 ] as const;
 export type ProjectId = (typeof projectIds)[number];
@@ -33,7 +29,7 @@ export const content = {
     email: "dridi.abdallah1@gmail.com",
     linkedin: "https://www.linkedin.com/in/abdallah-dridi-93589a184/",
     github: "https://github.com/Abdallah-Dridi",
-    location: "France",
+    targetCountry: "France",
   },
   availability: {
     start: "2027-02",
@@ -62,13 +58,13 @@ export const content = {
   ],
   experience: {
     soar: {
-      organization: "Tunisian Bank",
+      organization: "Amen Bank",
       location: "Tunis",
       period: "2026-06/2026-09",
       tools: ["Splunk SOAR", "MISP", "VirusTotal", "Gemini API"],
     },
     scanner: {
-      organization: "Tunisian Bank",
+      organization: "Amen Bank",
       location: "Tunis",
       period: "2025-08",
       tools: ["Gobuster", "SQLMap", "XSStrike", "HTML"],
@@ -105,24 +101,23 @@ export const content = {
         "YARA",
         "MITRE ATT&CK",
       ],
+      findings: {
+        resourceEntropy: "high",
+        estimatedPackingPercent: 82,
+      },
     },
     wirecat: {
       kind: "product",
       tools: ["Java", "JavaFX", "Pcap4J", "Maven", "MVC"],
+      exportFormats: [".pcap", ".csv", ".txt"],
     },
     kooretna: {
       kind: "product",
       tools: ["Groq API", "LangChain", "Hugging Face datasets", "RAG"],
     },
-    obsec: {
-      kind: "concept",
-      aliases: ["AnonChat"],
-      tools: ["Python"],
-      todo:
-        "TODO: Confirm implemented OBSEC features before replacing the concept-level description.",
-    },
     "risk-management": {
       kind: "academic",
+      placement: "flight-log-only",
       tools: ["EBIOS", "ISO 27005", "ALE", "ROSI", "WBS", "PERT", "EVM"],
     },
   } satisfies Record<ProjectId, unknown>,
@@ -157,7 +152,9 @@ export const content = {
     { id: "arabic", level: "native" },
   ],
   activities: {
-    sudosec: { result: "2nd place", event: "Securicon Tunisia" },
+    ctfTeam: "SudoSec",
+    result: "2nd place",
+    event: "Securicon Tunisia",
     memberships: ["Securinets", "IEEE TEK-UP"],
   },
   cv: {

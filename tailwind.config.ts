@@ -12,7 +12,21 @@ const config: Config = {
       colors: {
         ink: "var(--ink)",
         paper: "var(--paper)",
-        gold: "var(--gold)"
+        signal: "var(--signal-amber)",
+        radar: "var(--radar-green)",
+        sky: {
+          ground: "var(--sky-ground-top)",
+          troposphere: "var(--sky-troposphere-top)",
+          cloud: "var(--sky-cloud-top)",
+          jet: "var(--sky-jet-top)",
+          stratosphere: "var(--sky-stratosphere-top)",
+          space: "var(--sky-space)"
+        }
+      },
+      fontFamily: {
+        display: ["var(--font-display)"],
+        sans: ["var(--font-body)"],
+        mono: ["var(--font-mono)"]
       },
       letterSpacing: {
         display: "0.08em",
