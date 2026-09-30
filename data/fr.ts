@@ -102,6 +102,33 @@ export const fr = {
         wirecat: "Analyse réseau",
         kooretna: "IA · RAG",
       },
+      diagrams: {
+        orchestryx: {
+          environment: "Environnement isolé",
+        },
+        latrodectus: {
+          specimen: "Échantillon de loader Windows",
+          sampleType: "PE",
+          static: "Analyse statique",
+          sandbox: "Analyse en sandbox",
+          entropy: "Forte entropie .rsrc",
+          packing: "Packing estimé",
+          detection: "Pistes de détection",
+        },
+        wirecat: {
+          capture: "Capture en direct",
+          filter: "Filtre de protocole",
+          export: "Export des preuves",
+          ethernet: "Ethernet",
+          ip: "IP",
+          tcp: "TCP",
+        },
+        kooretna: {
+          apis: "API sportives",
+          modelType: "LLM",
+          answer: "Réponse statistique football",
+        },
+      },
     },
     experience: {
       eyebrow: "Journal terrain",

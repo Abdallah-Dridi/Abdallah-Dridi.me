@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 
 import {
   certificationIds,
@@ -19,6 +19,145 @@ const featuredProjectIds = [
 
 type FeaturedProjectId = (typeof featuredProjectIds)[number];
 
+function FlowArrow() {
+  return <span className="flow-arrow" aria-hidden="true" />;
+}
+
+function OrchestryxDiagram() {
+  const diagram = content.projects.orchestryx.tools;
+  const { dictionary } = useI18n();
+  const labels = dictionary.dossier.projects.diagrams.orchestryx;
+
+  return (
+    <div className="architecture architecture--orchestryx" aria-hidden="true">
+      <div className="architecture__request">
+        <span>{diagram[2]}</span>
+      </div>
+      <FlowArrow />
+      <div className="architecture__async">
+        <span>{diagram[4]}</span>
+        <i />
+        <span>{diagram[5]}</span>
+      </div>
+      <FlowArrow />
+      <div className="architecture__provisioner">
+        <span>{diagram[1]}</span>
+        <span>{diagram[10]}</span>
+      </div>
+      <FlowArrow />
+      <div className="architecture__isolation">
+        <span className="architecture__isolation-layer" />
+        <span className="architecture__isolation-layer" />
+        <strong>{labels.environment}</strong>
+        <small>{diagram[0]}</small>
+      </div>
+    </div>
+  );
+}
+
+function LatrodectusDiagram({ labels }: { labels: Record<string, string> }) {
+  const diagram = content.projects.latrodectus;
+
+  return (
+    <div className="architecture architecture--latrodectus" aria-hidden="true">
+      <div className="specimen-file">
+        <span>{labels.sampleType}</span>
+        <strong>{labels.specimen}</strong>
+        <small>{diagram.tools[0]}</small>
+      </div>
+      <div className="analysis-lanes">
+        <div>
+          <strong>{labels.static}</strong>
+          <span>{diagram.tools[4]} · {diagram.tools[5]}</span>
+          <span>{diagram.tools[6]} · {diagram.tools[7]}</span>
+        </div>
+        <div>
+          <strong>{labels.sandbox}</strong>
+          <span>{diagram.tools[1]}</span>
+          <span>{diagram.tools[2]} · {diagram.tools[3]}</span>
+        </div>
+      </div>
+      <div className="forensic-gauge">
+        <span>{labels.entropy}</span>
+        <i style={{ "--signal": "82%" } as CSSProperties} />
+        <strong>~{diagram.findings.estimatedPackingPercent}%</strong>
+        <small>{labels.packing}</small>
+      </div>
+      <div className="evidence-output">
+        <span>IOCs</span>
+        <span>{diagram.tools[9]}</span>
+        <span>{diagram.tools[8]}</span>
+        <span>{labels.detection}</span>
+      </div>
+    </div>
+  );
+}
+
+function WireCatDiagram({ labels }: { labels: Record<string, string> }) {
+  const diagram = content.projects.wirecat;
+
+  return (
+    <div className="architecture architecture--wirecat" aria-hidden="true">
+      <div className="packet-scope">
+        <span className="packet-scope__line packet-scope__line--one" />
+        <span className="packet-scope__line packet-scope__line--two" />
+        <span className="packet-scope__line packet-scope__line--three" />
+        <strong>{labels.capture}</strong>
+        <small>{diagram.tools[2]}</small>
+      </div>
+      <FlowArrow />
+      <div className="protocol-stack">
+        <span>{labels.ethernet}</span>
+        <span>{labels.ip}</span>
+        <span>{labels.tcp}</span>
+      </div>
+      <FlowArrow />
+      <div className="packet-filter">
+        <span>{labels.filter}</span>
+        <i />
+        <i />
+        <i />
+      </div>
+      <FlowArrow />
+      <div className="export-stack">
+        <strong>{labels.export}</strong>
+        {diagram.exportFormats.map((format) => <span key={format}>{format}</span>)}
+      </div>
+    </div>
+  );
+}
+
+function KooretnaDiagram({ labels }: { labels: Record<string, string> }) {
+  const diagram = content.projects.kooretna.tools;
+
+  return (
+    <div className="architecture architecture--kooretna" aria-hidden="true">
+      <div className="rag-sources">
+        <span>{labels.apis}</span>
+        <span>{diagram[2]}</span>
+      </div>
+      <FlowArrow />
+      <div className="rag-retrieval">
+        <i />
+        <strong>{diagram[3]}</strong>
+        <span>{diagram[1]}</span>
+      </div>
+      <FlowArrow />
+      <div className="rag-model">
+        <span>{labels.modelType}</span>
+        <strong>{diagram[0]}</strong>
+      </div>
+      <FlowArrow />
+      <div className="rag-answer">
+        <strong>{labels.answer}</strong>
+        <span />
+        <span />
+        <span />
+      </div>
+    </div>
+  );
+}
+
 function ProjectVisual({
   id,
   name,
@@ -30,28 +169,27 @@ function ProjectVisual({
   ariaLabel: string;
   illustrationLabel: string;
 }) {
-  const tools = content.projects[id].tools.slice(0, 6);
+  const { dictionary } = useI18n();
 
   return (
     <figure
       className={`project-visual project-visual--${id}`}
       aria-label={`${ariaLabel}: ${name}`}
     >
-      <div className="project-visual__canvas" aria-hidden="true">
-        <span className="project-visual__orbit project-visual__orbit--outer" />
-        <span className="project-visual__orbit project-visual__orbit--inner" />
-        <span className="project-visual__axis project-visual__axis--x" />
-        <span className="project-visual__axis project-visual__axis--y" />
-        <span className="project-visual__pulse" />
-        {tools.map((tool, index) => (
-          <span
-            className={`project-visual__node project-visual__node--${index + 1}`}
-            key={tool}
-          >
-            {tool}
-          </span>
-        ))}
+      <div className="project-visual__telemetry" aria-hidden="true">
+        <span>{name}</span>
+        <span>● {illustrationLabel}</span>
       </div>
+      {id === "orchestryx" && <OrchestryxDiagram />}
+      {id === "latrodectus" && (
+        <LatrodectusDiagram labels={dictionary.dossier.projects.diagrams.latrodectus} />
+      )}
+      {id === "wirecat" && (
+        <WireCatDiagram labels={dictionary.dossier.projects.diagrams.wirecat} />
+      )}
+      {id === "kooretna" && (
+        <KooretnaDiagram labels={dictionary.dossier.projects.diagrams.kooretna} />
+      )}
       <figcaption>{illustrationLabel}</figcaption>
     </figure>
   );
@@ -135,13 +273,16 @@ export function PortfolioDossier() {
             </p>
             <h4>{projectCopy.name}</h4>
             <p>{projectCopy.description}</p>
-            <div className="project-stack">
+            <div className="project-stack" aria-label={dictionary.dossier.projects.stack}>
               <span className="hud-label">{dictionary.dossier.projects.stack}</span>
-              <ul>
-                {project.tools.map((tool) => (
-                  <li key={tool}>{tool}</li>
+              <ol>
+                {project.tools.map((tool, index) => (
+                  <li key={tool}>
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    {tool}
+                  </li>
                 ))}
-              </ul>
+              </ol>
             </div>
           </div>
         </div>
