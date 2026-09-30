@@ -12,6 +12,7 @@ export const en = {
   common: {
     skip: "Skip to content",
     illustration: "Illustration",
+    earned: "Earned",
     inProgress: "In progress",
     native: "Native",
     downloadCv: "Download my CV",
@@ -30,7 +31,7 @@ export const en = {
     title: "This is the route I’m building.",
     lead:
       "I move from the alert on the ground to the cloud above it, then into the automation and AI that help security work move faster without losing human judgment.",
-    mappingLabel: "Altitude-to-background map",
+    mappingLabel: "Open my evidence deck",
   },
   layers: {
     ground: {
@@ -76,9 +77,61 @@ export const en = {
       body: "I’m looking for a six-month end-of-studies internship in France where I can keep building useful, defensible security automation.",
     },
   },
+  dossier: {
+    eyebrow: "My flight dossier",
+    title: "Don’t take the forecast on trust. Inspect the evidence.",
+    portraitAlt: "I’m Abdallah Dridi, working with technical equipment",
+    identity: {
+      label: "Identity transponder",
+      name: "I’m Abdallah Dridi.",
+      role: "I study systems and network security.",
+      route: "Tunisia · Germany · France",
+      status: "Ready for a PFE from February 2027",
+    },
+    projects: {
+      eyebrow: "Selected projects",
+      title: "I learn by building systems I can inspect.",
+      selectorAria: "Choose one of my projects",
+      visualAria: "Illustrated system view for the selected project",
+      stack: "Stack and evidence",
+      categories: {
+        orchestryx: "Cloud security",
+        latrodectus: "Detection · Academic",
+        wirecat: "Network analysis",
+        kooretna: "AI · RAG",
+      },
+    },
+    experience: {
+      eyebrow: "Field log",
+      title: "I’ve used automation in two security internships.",
+    },
+    academics: {
+      eyebrow: "Academic route",
+      title: "My engineering route crosses three countries.",
+      activitiesTitle: "Outside the classroom",
+      activities: [
+        "I placed 2nd with the SudoSec CTF team at Securicon Tunisia.",
+        "I’m a member of Securinets and IEEE TEK-UP.",
+      ],
+    },
+    certifications: {
+      eyebrow: "Credentials",
+      title: "What I’ve earned, and what I’m working toward.",
+    },
+    contact: {
+      eyebrow: "Landing clearance",
+      title: "Clear skies from February 2027. Let’s talk.",
+      body: "I’m looking for a six-month PFE in France where I can work on cloud security, security automation, detection, or practical AI security.",
+      email: "Email me",
+      linkedin: "LinkedIn",
+      github: "GitHub",
+      cv: "Download my CV",
+    },
+  },
   experience: {
     soar: {
       role: "My SOC/SOAR automation internship",
+      period: "June–September 2026",
       bullets: [
         "I developed and adapted Splunk SOAR playbooks to automate alert triage inside an existing SOC environment.",
         "I automated Threat Intelligence enrichment with MISP and VirusTotal.",
@@ -87,6 +140,7 @@ export const en = {
     },
     scanner: {
       role: "My web vulnerability assessment internship",
+      period: "August 2025",
       bullets: [
         "I built an automated OWASP Top 10 web vulnerability scanner combining Gobuster, SQLMap, and XSStrike.",
         "I generated HTML reports with findings, impact, and remediation guidance.",
@@ -121,9 +175,18 @@ export const en = {
     },
   },
   education: {
-    "tek-up": "I’m completing an engineering degree in systems and network security.",
-    schmalkalden: "I completed an Erasmus+ exchange.",
-    cesi: "I’m completing an academic mobility year.",
+    "tek-up": {
+      location: "Tunisia",
+      description: "I’m completing an engineering degree in systems and network security.",
+    },
+    schmalkalden: {
+      location: "Germany",
+      description: "I completed an Erasmus+ exchange.",
+    },
+    cesi: {
+      location: "France",
+      description: "I’m completing an academic mobility year.",
+    },
   },
   languages: {
     french: "French",
@@ -142,4 +205,3 @@ type WidenStrings<T> = T extends string
       : T;
 
 export type Dictionary = WidenStrings<typeof en>;
-

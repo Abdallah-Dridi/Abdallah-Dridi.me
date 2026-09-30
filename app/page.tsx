@@ -1,12 +1,11 @@
 "use client";
 
 import { CloudFallback } from "@/components/cloud-fallback";
-import { altitudeLayers } from "@/data/layers";
+import { PortfolioDossier } from "@/components/portfolio-dossier";
 import { useI18n } from "@/lib/i18n";
 
 export default function HomePage() {
   const { dictionary } = useI18n();
-  const previewLayers = altitudeLayers.filter(({ id }) => id !== "ground");
 
   return (
     <>
@@ -49,41 +48,7 @@ export default function HomePage() {
           </p>
         </section>
 
-        {previewLayers.map((layer, index) => {
-          const copy = dictionary.layers[layer.id];
-
-          return (
-            <section
-              className={`altitude-layer altitude-layer--${layer.id}`}
-              id={layer.anchor}
-              aria-labelledby={`${layer.anchor}-title`}
-              key={layer.id}
-            >
-              <CloudFallback layer={layer.id} />
-              <div className="layer-preview">
-                <div className="layer-preview__telemetry">
-                  <span>{copy.altitude}</span>
-                  <span>0{index + 1}</span>
-                  <span>{dictionary.common.illustration}</span>
-                </div>
-                <article className="instrument-panel">
-                  <span className="instrument-panel__tick instrument-panel__tick--tl" />
-                  <span className="instrument-panel__tick instrument-panel__tick--tr" />
-                  <span className="instrument-panel__tick instrument-panel__tick--bl" />
-                  <span className="instrument-panel__tick instrument-panel__tick--br" />
-                  <p className="hud-label">{copy.label}</p>
-                  <h2 id={`${layer.anchor}-title`}>{copy.title}</h2>
-                  <p>{copy.body}</p>
-                </article>
-                <div className="layer-preview__altitude" aria-hidden="true">
-                  <span />
-                  <i />
-                  <span />
-                </div>
-              </div>
-            </section>
-          );
-        })}
+        <PortfolioDossier />
       </main>
     </>
   );

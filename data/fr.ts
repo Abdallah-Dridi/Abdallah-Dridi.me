@@ -14,6 +14,7 @@ export const fr = {
   common: {
     skip: "Aller au contenu",
     illustration: "Illustration",
+    earned: "Obtenue",
     inProgress: "En cours",
     native: "Langue maternelle",
     downloadCv: "Télécharger mon CV",
@@ -32,7 +33,7 @@ export const fr = {
     title: "Voici la trajectoire que je construis.",
     lead:
       "Je pars de l’alerte au sol, je monte vers le cloud, puis vers l’automatisation et l’IA qui accélèrent le travail de sécurité sans écarter le jugement humain.",
-    mappingLabel: "Carte altitude-couleur",
+    mappingLabel: "Ouvrir mon dossier de preuves",
   },
   layers: {
     ground: {
@@ -78,9 +79,61 @@ export const fr = {
       body: "Je recherche un PFE de six mois en France pour continuer à construire des automatisations de sécurité utiles et défendables en entretien.",
     },
   },
+  dossier: {
+    eyebrow: "Mon dossier de vol",
+    title: "Ne vous fiez pas uniquement aux prévisions. Examinez les preuves.",
+    portraitAlt: "Je suis Abdallah Dridi et je travaille avec du matériel technique",
+    identity: {
+      label: "Transpondeur d’identité",
+      name: "Je suis Abdallah Dridi.",
+      role: "J’étudie la sécurité des systèmes et des réseaux.",
+      route: "Tunisie · Allemagne · France",
+      status: "Prêt pour un PFE à partir de février 2027",
+    },
+    projects: {
+      eyebrow: "Projets sélectionnés",
+      title: "J’apprends en construisant des systèmes que je peux inspecter.",
+      selectorAria: "Choisir l’un de mes projets",
+      visualAria: "Vue système illustrée du projet sélectionné",
+      stack: "Stack et éléments concrets",
+      categories: {
+        orchestryx: "Sécurité cloud",
+        latrodectus: "Détection · Académique",
+        wirecat: "Analyse réseau",
+        kooretna: "IA · RAG",
+      },
+    },
+    experience: {
+      eyebrow: "Journal terrain",
+      title: "J’ai appliqué l’automatisation pendant deux stages en cybersécurité.",
+    },
+    academics: {
+      eyebrow: "Parcours académique",
+      title: "Mon parcours d’ingénieur traverse trois pays.",
+      activitiesTitle: "En dehors des cours",
+      activities: [
+        "J’ai obtenu la 2e place avec l’équipe CTF SudoSec à Securicon Tunisia.",
+        "Je suis membre de Securinets et d’IEEE TEK-UP.",
+      ],
+    },
+    certifications: {
+      eyebrow: "Certifications",
+      title: "Ce que j’ai obtenu et ce que je prépare actuellement.",
+    },
+    contact: {
+      eyebrow: "Autorisation d’atterrir",
+      title: "Ciel dégagé à partir de février 2027. Échangeons.",
+      body: "Je recherche un PFE de six mois en France autour de la sécurité cloud, de l’automatisation, de la détection ou de la sécurité pratique de l’IA.",
+      email: "M’écrire",
+      linkedin: "LinkedIn",
+      github: "GitHub",
+      cv: "Télécharger mon CV",
+    },
+  },
   experience: {
     soar: {
       role: "Mon stage en automatisation SOC/SOAR",
+      period: "Juin–septembre 2026",
       bullets: [
         "J’ai développé et adapté des playbooks Splunk SOAR pour automatiser le triage des alertes au sein d’un SOC existant.",
         "J’ai automatisé l’enrichissement Threat Intelligence avec MISP et VirusTotal.",
@@ -89,6 +142,7 @@ export const fr = {
     },
     scanner: {
       role: "Mon stage en évaluation des vulnérabilités web",
+      period: "Août 2025",
       bullets: [
         "J’ai développé un scanner automatisé des vulnérabilités OWASP Top 10 combinant Gobuster, SQLMap et XSStrike.",
         "J’ai généré des rapports HTML présentant les vulnérabilités, leur impact et les recommandations de remédiation.",
@@ -123,9 +177,18 @@ export const fr = {
     },
   },
   education: {
-    "tek-up": "Je prépare un diplôme d’ingénieur en sécurité des systèmes et réseaux.",
-    schmalkalden: "J’ai effectué un échange Erasmus+.",
-    cesi: "J’effectue une mobilité académique.",
+    "tek-up": {
+      location: "Tunisie",
+      description: "Je prépare un diplôme d’ingénieur en sécurité des systèmes et réseaux.",
+    },
+    schmalkalden: {
+      location: "Allemagne",
+      description: "J’ai effectué un échange Erasmus+.",
+    },
+    cesi: {
+      location: "France",
+      description: "J’effectue une mobilité académique.",
+    },
   },
   languages: {
     french: "Français",
@@ -134,4 +197,3 @@ export const fr = {
     arabic: "Arabe",
   },
 } as const satisfies Dictionary;
-
