@@ -132,11 +132,6 @@ export const en = {
         serial: "2nd place",
       },
       {
-        title: "Securinets CTF, forensics",
-        body: "Static analysis of a remote-access trojan: strings, imports and config before ever running it.",
-        serial: "Forensics",
-      },
-      {
         title: "SickSociety CTF, “hateme”",
         body: "Docker layer forensics, unpacking a PyInstaller binary, decompiling Python bytecode, then reversing an LCG-based XOR stream cipher. One flag, five skills.",
         serial: "Forensics",

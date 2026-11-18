@@ -134,11 +134,6 @@ export const fr = {
         serial: "2e place",
       },
       {
-        title: "CTF Securinets, forensics",
-        body: "Analyse statique d’un cheval de Troie d’accès à distance : chaînes, imports et configuration avant de l’exécuter.",
-        serial: "Forensics",
-      },
-      {
         title: "CTF SickSociety, « hateme »",
         body: "Forensics de couches Docker, extraction d’un binaire PyInstaller, décompilation de bytecode Python, puis rétro-ingénierie d’un chiffrement XOR à base de LCG. Un flag, cinq compétences.",
         serial: "Forensics",
