@@ -5,20 +5,18 @@ import type { PropsWithChildren } from "react";
 import { useEffect } from "react";
 
 import { I18nProvider } from "@/lib/i18n";
+import { prefersReducedMotion, setLenis } from "@/lib/scroll";
 
 export function Providers({ children }: PropsWithChildren) {
   useEffect(() => {
-    const reducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-
-    if (reducedMotion) return;
+    if (prefersReducedMotion()) return;
 
     const lenis = new Lenis({
-      duration: 1.15,
+      duration: 1.1,
       smoothWheel: true,
       wheelMultiplier: 0.9,
     });
+    setLenis(lenis);
     let frame = 0;
 
     const tick = (time: number) => {
@@ -30,6 +28,7 @@ export function Providers({ children }: PropsWithChildren) {
 
     return () => {
       window.cancelAnimationFrame(frame);
+      setLenis(null);
       lenis.destroy();
     };
   }, []);

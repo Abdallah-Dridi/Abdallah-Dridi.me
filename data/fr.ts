@@ -3,224 +3,180 @@ import type { Dictionary } from "./en";
 export const fr = {
   locale: "fr",
   seo: {
-    title: "Abdallah Dridi — Sécurité cloud & IA",
+    title: "Abdallah Dridi — ingénieur sécurité en formation",
     description:
-      "Je suis Abdallah Dridi, étudiant ingénieur en cybersécurité. Je développe des automatisations pour le SOC, le cloud, le DevSecOps et l’analyse assistée par IA.",
-  },
-  nav: {
-    home: "AD / Ciel dégagé",
-    languageAria: "Choisir la langue",
+      "Étudiant ingénieur en cybersécurité : automatisation SOC, sécurité cloud et analyse assistée par IA. Disponible pour un stage de fin d’études de six mois en France à partir de février 2027.",
   },
   common: {
     skip: "Aller au contenu",
-    illustration: "Illustration",
-    earned: "Obtenue",
-    inProgress: "En cours",
-    native: "Langue maternelle",
-    downloadCv: "Télécharger mon CV",
+    languageAria: "Choisir la langue",
+    medium: "Technique",
   },
-  hero: {
-    altitude: "0 m · Décollage",
-    title: "Je suis Abdallah. Je construis l’automatisation qui maintient le cloud sous un ciel dégagé.",
-    subtitle:
-      "Je suis étudiant ingénieur en cybersécurité et je travaille à la rencontre de la détection, du cloud, de l’automatisation et de l’IA.",
-    availability: "Disponible en février 2027 · PFE de 6 mois · France",
-    cue: "Commencer l’ascension",
-    fallbackStatus: "Atmosphère de secours active",
-  },
-  foundation: {
-    eyebrow: "Phase 01 · Système de vol",
-    title: "Voici la trajectoire que je construis.",
-    lead:
-      "Je pars de l’alerte au sol, je monte vers le cloud, puis vers l’automatisation et l’IA qui accélèrent le travail de sécurité sans écarter le jugement humain.",
-    mappingLabel: "Ouvrir mon dossier de preuves",
-  },
-  layers: {
-    ground: {
-      altitude: "0 m",
-      short: "Décollage",
-      label: "Sol · Aube",
-      title: "Je commence par le signal.",
-      body: "Je cherche ce qui a changé, ce qui peut être vérifié et ce qui mérite l’attention d’un analyste.",
-    },
-    soc: {
-      altitude: "FL 040",
-      short: "SOC",
-      label: "Troposphère · Tour de contrôle",
-      title: "J’automatise la première réponse.",
-      body: "Chez Amen Bank, j’ai automatisé le triage des alertes avec des playbooks Splunk SOAR au sein d’un SOC existant, enrichi les alertes avec MISP et VirusTotal, puis intégré une analyse assistée par Gemini.",
-    },
-    cloud: {
-      altitude: "FL 120",
-      short: "Cloud",
-      label: "Couche nuageuse · Au-dessus des nuages",
-      title: "Je crée un espace isolé pour les activités de sécurité.",
-      body: "J’ai construit Orchestryx pour provisionner de façon asynchrone des environnements isolés de cyber range et de CTF sur AWS.",
-    },
-    pipeline: {
-      altitude: "FL 240",
-      short: "Pipeline",
-      label: "Courant-jet · Trajectoire",
-      title: "Je transforme le travail répétable en flux.",
-      body: "Je relie les outils de sécurité en workflows : de la découverte web et des tests aux rapports, playbooks, files de messages et provisionnements cloud.",
-    },
-    ai: {
-      altitude: "FL 400",
-      short: "IA",
-      label: "Stratosphère · Prévision",
-      title: "La sécurité de l’IA est la direction que je prends.",
-      body: "J’ai déjà appliqué un LLM à de véritables alertes SOC et construit un assistant de statistiques footballistiques fondé sur un LLM et un pipeline RAG. Mon expérience est encore récente, concrète et en progression.",
-    },
-    space: {
-      altitude: "Limite de l’espace",
-      short: "Contact",
-      label: "Autorisation d’atterrir · Journal de vol",
-      title: "Ciel dégagé à partir de février 2027. Échangeons.",
-      body: "Je recherche un PFE de six mois en France pour continuer à construire des automatisations de sécurité utiles et défendables en entretien.",
+  rail: {
+    aria: "Sections de la page",
+    goTo: "Aller à",
+    stages: {
+      foot: "Le pied",
+      climb: "L’ascension",
+      works: "Œuvres",
+      tickets: "Tickets",
+      summit: "Le sommet",
     },
   },
-  dossier: {
-    eyebrow: "Mon dossier de vol",
-    title: "Ne vous fiez pas uniquement aux prévisions. Examinez les preuves.",
-    portraitAlt: "Je suis Abdallah Dridi et je travaille avec du matériel technique",
-    identity: {
-      label: "Transpondeur d’identité",
-      name: "Je suis Abdallah Dridi.",
-      role: "J’étudie la sécurité des systèmes et des réseaux.",
-      route: "Tunisie · Allemagne · France",
-      status: "Prêt pour un PFE à partir de février 2027",
-    },
-    projects: {
-      eyebrow: "Projets sélectionnés",
-      title: "J’apprends en construisant des systèmes que je peux inspecter.",
-      selectorAria: "Choisir l’un de mes projets",
-      visualAria: "Vue système illustrée du projet sélectionné",
-      stack: "Stack et éléments concrets",
-      categories: {
-        orchestryx: "Sécurité cloud",
-        latrodectus: "Détection · Académique",
-        wirecat: "Analyse réseau",
-        kooretna: "IA · RAG",
+  foot: {
+    kicker: "Abdallah Dridi, ingénieur sécurité en formation",
+    title: "Toujours en montée.",
+    lead: "Je construis l’automatisation qui aide les défenseurs à suivre le rythme : workflows SOC, sécurité cloud et analyse assistée par IA. Le même rocher, un peu plus haut à chaque fois.",
+    tape: "Disponible pour un stage de 6 mois dès février 2027",
+  },
+  climb: {
+    title: "L’ascension",
+    lead: "Chaque étape jusqu’ici, dans l’ordre. Ce que j’ai fait, et ce que j’en ai appris.",
+    stations: [
+      {
+        when: "2022",
+        title: "TEK-UP University, Tunisie",
+        body: "Début d’un cycle ingénieur en sécurité des systèmes et des réseaux.",
+        lesson: "Les réseaux d’abord. Tout le reste repose dessus.",
       },
-      diagrams: {
-        orchestryx: {
-          environment: "Environnement isolé",
-        },
-        latrodectus: {
-          specimen: "Échantillon de loader Windows",
-          sampleType: "PE",
-          static: "Analyse statique",
-          sandbox: "Analyse en sandbox",
-          entropy: "Forte entropie .rsrc",
-          packing: "Packing estimé",
-          detection: "Pistes de détection",
-        },
-        wirecat: {
-          capture: "Capture en direct",
-          filter: "Filtre de protocole",
-          export: "Export des preuves",
-          ethernet: "Ethernet",
-          ip: "IP",
-          tcp: "TCP",
-        },
-        kooretna: {
-          apis: "API sportives",
-          modelType: "LLM",
-          answer: "Réponse statistique football",
-        },
+      {
+        when: "Août 2025",
+        title: "Amen Bank, Tunis",
+        body: "Développement d’un scanner automatisé OWASP Top 10 combinant Gobuster, SQLMap et XSStrike, avec des rapports HTML détaillant l’impact et la remédiation.",
+        lesson: "Trouver la faille, c’est la moitié du travail. C’est le rapport qui la fait corriger.",
+      },
+      {
+        when: "2026",
+        title: "Hochschule Schmalkalden, Allemagne",
+        body: "Semestre d’échange Erasmus+.",
+        lesson: "Un nouveau pays, c’est un cours accéléré pour repartir de zéro.",
+      },
+      {
+        when: "Juin – septembre 2026",
+        title: "SOC d’Amen Bank, Tunis",
+        body: "Création et adaptation de playbooks Splunk SOAR pour le tri des alertes, enrichissement automatisé par MISP et VirusTotal, et analyse des alertes assistée par Gemini.",
+        lesson: "Changement de camp : de l’intrusion à la surveillance. L’automatisation n’aide que si l’analyste lui fait confiance.",
+      },
+      {
+        when: "2026 – 2027",
+        title: "CESI École d’Ingénieurs, France",
+        body: "Cycle ingénieur en mobilité académique.",
+        lesson: "Apprendre à expliquer le travail, pas seulement à le faire.",
+      },
+    ],
+    carryTitle: "Ce que je porte",
+  },
+  works: {
+    title: "Œuvres",
+    lead: "Des choses construites pour comprendre comment elles cassent.",
+    items: {
+      orchestryx: {
+        title: "Orchestryx",
+        category: "Sécurité cloud",
+        body: "Une plateforme cloud-native de cyber range et de CTF qui provisionne des environnements isolés de façon asynchrone sur AWS.",
+      },
+      latrodectus: {
+        title: "Latrodectus",
+        category: "Analyse de malware, projet académique",
+        body: "Tri, analyse statique et en sandbox d’un vrai loader Windows. IOC, mapping MITRE ATT&CK, règles YARA et pistes de détection documentés, dont une forte entropie .rsrc et un niveau de packing estimé à 82 %.",
+      },
+      wirecat: {
+        title: "WireCat",
+        category: "Analyse réseau",
+        body: "Un analyseur de paquets en temps réel : capture en direct, inspection Ethernet, IP et TCP, filtres par protocole et export en .pcap, .csv et .txt.",
+      },
+      kooretna: {
+        title: "Kooretna",
+        category: "IA, recherche augmentée",
+        body: "Un assistant de statistiques de football construit sur l’API Groq et un pipeline RAG alimenté par des API sportives.",
       },
     },
-    experience: {
-      eyebrow: "Journal terrain",
-      title: "J’ai appliqué l’automatisation pendant deux stages en cybersécurité.",
+    risk: {
+      title: "Étude de gestion des risques",
+      category: "Gouvernance, projet académique",
+      body: "Une analyse de risques EBIOS et ISO 27005 avec ALE et ROSI, une charte de projet, un WBS, un PERT et un suivi de la valeur acquise.",
     },
-    academics: {
-      eyebrow: "Parcours académique",
-      title: "Mon parcours d’ingénieur traverse trois pays.",
-      activitiesTitle: "En dehors des cours",
-      activities: [
-        "J’ai obtenu la 2e place avec l’équipe CTF SudoSec à Securicon Tunisia.",
-        "Je suis membre de Securinets et d’IEEE TEK-UP.",
-      ],
-    },
-    certifications: {
-      eyebrow: "Certifications",
-      title: "Ce que j’ai obtenu et ce que je prépare actuellement.",
-    },
-    contact: {
-      eyebrow: "Autorisation d’atterrir",
-      title: "Ciel dégagé à partir de février 2027. Échangeons.",
-      body: "Je recherche un PFE de six mois en France autour de la sécurité cloud, de l’automatisation, de la détection ou de la sécurité pratique de l’IA.",
-      email: "M’écrire",
-      linkedin: "LinkedIn",
-      github: "GitHub",
-      cv: "Télécharger mon CV",
+    etch: {
+      request: "Requête",
+      queue: "File",
+      workers: "Workers",
+      environment: "Range isolé",
+      sample: "Loader Windows",
+      highEntropy: "Forte entropie",
+      packed: "82 % packé",
+      capture: "Capture",
+      filter: "Filtre",
+      export: "Export",
+      question: "Question",
+      sources: "API sportives",
+      retrieve: "Recherche",
+      answer: "Réponse",
     },
   },
-  experience: {
-    soar: {
-      role: "Mon stage en automatisation SOC/SOAR",
-      period: "Juin–septembre 2026",
-      bullets: [
-        "J’ai développé et adapté des playbooks Splunk SOAR pour automatiser le triage des alertes au sein d’un SOC existant.",
-        "J’ai automatisé l’enrichissement Threat Intelligence avec MISP et VirusTotal.",
-        "J’ai intégré l’API Gemini pour assister l’analyse des alertes par LLM.",
-      ],
-    },
-    scanner: {
-      role: "Mon stage en évaluation des vulnérabilités web",
-      period: "Août 2025",
-      bullets: [
-        "J’ai développé un scanner automatisé des vulnérabilités OWASP Top 10 combinant Gobuster, SQLMap et XSStrike.",
-        "J’ai généré des rapports HTML présentant les vulnérabilités, leur impact et les recommandations de remédiation.",
-      ],
-    },
+  tickets: {
+    title: "Tickets",
+    lead: "On ne gagne pas sans acheter le ticket. Tout ce que j’ai tenté, y compris ce qui n’est pas encore tiré.",
+    items: [
+      {
+        title: "Équipe CTF SudoSec",
+        body: "Compétition à Securicon Tunisie.",
+        serial: "2e place",
+      },
+      {
+        title: "Parti de l’offensif",
+        body: "eJPT et scanners web d’abord. Puis passage à la blue team, où le travail consiste à faire tenir les choses debout.",
+        serial: "Changement de cap",
+      },
+      {
+        title: "QuotePilot",
+        body: "Un assistant IA de devis pour les petites entreprises de réparation. Étude de marché, business model et seuil de rentabilité, en équipe.",
+        serial: "2026",
+      },
+      {
+        title: "Support IA pour artisans",
+        body: "Un assistant agentique qui répond aux clients, réserve des créneaux et prend des commandes. Présenté en binôme au CESI.",
+        serial: "2026",
+      },
+      {
+        title: "Securinets et IEEE TEK-UP",
+        body: "Être là, et continuer à être là.",
+        serial: "Membre",
+      },
+      {
+        title: "AWS Certified Security – Specialty",
+        body: "En préparation.",
+        serial: "Tirage en attente",
+      },
+      {
+        title: "CKA",
+        body: "En préparation.",
+        serial: "Tirage en attente",
+      },
+      {
+        title: "CyberDefenders Blue Team Level 1",
+        body: "En préparation.",
+        serial: "Tirage en attente",
+      },
+    ],
   },
-  projects: {
-    orchestryx: {
-      name: "Orchestryx",
-      description:
-        "J’ai construit une plateforme cloud-native de cyber range et de CTF qui provisionne des environnements isolés de façon asynchrone.",
-    },
-    latrodectus: {
-      name: "Analyse du malware Latrodectus",
-      description:
-        "J’ai réalisé, dans un cadre académique, le triage, l’analyse statique et l’analyse en sandbox d’un véritable loader Windows. J’ai documenté les IOCs, la cartographie MITRE ATT&CK, YARA et les pistes de détection, avec une forte entropie de .rsrc et un taux de packing estimé à environ 82 %.",
-    },
-    wirecat: {
-      name: "WireCat",
-      description:
-        "J’ai construit un analyseur de paquets en temps réel avec capture live, inspection Ethernet/IP/TCP, filtrage par protocole et export en .pcap, .csv et .txt.",
-    },
-    kooretna: {
-      name: "Kooretna",
-      description:
-        "J’ai construit un assistant de statistiques footballistiques avec l’API Groq et un pipeline RAG alimenté par des API sportives.",
-    },
-    "risk-management": {
-      name: "Mon projet de gestion des risques cyber",
-      description:
-        "J’ai réalisé une analyse académique des risques avec EBIOS, ISO 27005, ALE et ROSI, complétée par une charte projet, un WBS, PERT et l’Earned Value Management.",
-    },
+  summit: {
+    title: "Prochaine étape : un stage de six mois, dès février 2027.",
+    body: "Je cherche un stage de fin d’études en France en automatisation SOC, réponse à incident, sécurité cloud ou sécurité de l’IA appliquée.",
+    email: "M’écrire",
+    linkedin: "LinkedIn",
+    github: "GitHub",
+    cv: "Télécharger mon CV",
+    portraitAlt: "Abdallah Dridi, en noir et blanc, travaillant sur un petit robot",
+    portraitCaption: "À l’établi. Photographie.",
+    languagesTitle: "Langues",
+    languages: [
+      { name: "Français", level: "C1" },
+      { name: "Anglais", level: "C1" },
+      { name: "Allemand", level: "A2" },
+      { name: "Arabe", level: "Langue maternelle" },
+    ],
+    rollBack: "Redescendre",
+    rollBackHint: "Retour au pied de la colline",
+    colophon: "Composé en Redaction et Archivo.",
   },
-  education: {
-    "tek-up": {
-      location: "Tunisie",
-      description: "Je prépare un diplôme d’ingénieur en sécurité des systèmes et réseaux.",
-    },
-    schmalkalden: {
-      location: "Allemagne",
-      description: "J’ai effectué un échange Erasmus+.",
-    },
-    cesi: {
-      location: "France",
-      description: "J’effectue une mobilité académique.",
-    },
-  },
-  languages: {
-    french: "Français",
-    english: "Anglais",
-    german: "Allemand",
-    arabic: "Arabe",
-  },
-} as const satisfies Dictionary;
+} satisfies Dictionary;

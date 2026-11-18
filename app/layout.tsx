@@ -1,33 +1,11 @@
-import type { Metadata } from "next";
-import { Geist, Instrument_Serif, JetBrains_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 
-import { Navbar } from "@/components/navbar";
 import { Providers } from "@/components/providers";
 import { content } from "@/data/content";
 import { en } from "@/data/en";
 
 import "./globals.css";
-
-const instrumentSerif = Instrument_Serif({
-  weight: "400",
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  variable: "--font-instrument",
-  display: "swap",
-});
-
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist",
-  display: "swap",
-});
-
-const jetBrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://abdallah-dridi.me"),
@@ -55,16 +33,31 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#CFCCC4",
+};
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${instrumentSerif.variable} ${geist.variable} ${jetBrainsMono.variable}`}
-      >
-        <Providers>
-          <Navbar />
-          {children}
-        </Providers>
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/archivo/archivo-latin-wdth-normal.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/redaction/redaction-70-latin-400-normal.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
+      <body>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
