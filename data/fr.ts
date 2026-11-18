@@ -64,12 +64,16 @@ export const fr = {
         lesson: "Apprendre à expliquer le travail, pas seulement à le faire.",
       },
     ],
-    carryTitle: "Ce que je porte",
   },
   works: {
     title: "Œuvres",
     lead: "Des choses construites pour comprendre comment elles cassent.",
     items: {
+      forenmate: {
+        title: "ForenMate",
+        category: "DFIR et agents IA, projet d’équipe en cours",
+        body: "Un espace d’enquête unique pour les PCAP, images disque et dumps mémoire. Des workers isolés extraient les artefacts et les normalisent en événements consultables, puis des agents IA corrèlent les preuves réseau, disque et mémoire en chronologies, chaque conclusion renvoyant à sa source pour l’analyste.",
+      },
       orchestryx: {
         title: "Orchestryx",
         category: "Sécurité cloud",
@@ -91,12 +95,14 @@ export const fr = {
         body: "Un assistant de statistiques de football construit sur l’API Groq et un pipeline RAG alimenté par des API sportives.",
       },
     },
-    risk: {
-      title: "Étude de gestion des risques",
-      category: "Gouvernance, projet académique",
-      body: "Une analyse de risques EBIOS et ISO 27005 avec ALE et ROSI, une charte de projet, un WBS, un PERT et un suivi de la valeur acquise.",
-    },
     etch: {
+      isolated: "Workers isolés",
+      timeline: "Chronologie",
+      agents: "Agents IA",
+      findings: "Conclusions",
+      pcap: "PCAP",
+      disk: "Image disque",
+      memory: "Dump mémoire",
       request: "Requête",
       queue: "File",
       workers: "Workers",
@@ -115,12 +121,47 @@ export const fr = {
   },
   tickets: {
     title: "Tickets",
-    lead: "On ne gagne pas sans acheter le ticket. Tout ce que j’ai tenté, y compris ce qui n’est pas encore tiré.",
+    lead: "On ne gagne pas sans acheter le ticket. Chaque examen passé et chaque CTF tenté, avec ce que chacun m’a appris.",
     items: [
       {
+        title: "eJPT",
+        body: "M’a appris à penser comme un attaquant : tout énumérer avant de toucher à quoi que ce soit, puis pivoter dans un réseau, une machine à la fois.",
+        serial: "Certifié",
+      },
+      {
         title: "Équipe CTF SudoSec",
-        body: "Compétition à Securicon Tunisie.",
+        body: "Compétition à Securicon Tunisie. Appris à répartir les épreuves vite et à faire confiance à l’équipe sur ce que je ne sais pas faire.",
         serial: "2e place",
+      },
+      {
+        title: "CTF Securinets, forensics",
+        body: "Analyse statique d’un cheval de Troie d’accès à distance : chaînes, imports et configuration avant de l’exécuter.",
+        serial: "Forensics",
+      },
+      {
+        title: "CTF SickSociety, « hateme »",
+        body: "Forensics de couches Docker, extraction d’un binaire PyInstaller, décompilation de bytecode Python, puis rétro-ingénierie d’un chiffrement XOR à base de LCG. Un flag, cinq compétences.",
+        serial: "Forensics",
+      },
+      {
+        title: "CI/CD Goat",
+        body: "Onze défis sur l’empoisonnement de pipeline, l’escalade de jetons et la compromission de la chaîne d’approvisionnement. Le pipeline de build fait partie de la surface d’attaque.",
+        serial: "11 défis",
+      },
+      {
+        title: "RHCSA",
+        body: "Administration Linux en conditions d’examen : permissions, SELinux, systemd, stockage. On défend mieux un système quand on en a construit un.",
+        serial: "Certifié",
+      },
+      {
+        title: "AWS Solutions Architect – Associate",
+        body: "VPC, IAM et architectures résilientes. La plupart des incidents cloud commencent par un choix de configuration, donc la sécurité aussi.",
+        serial: "Certifié",
+      },
+      {
+        title: "Google IT Automation with Python",
+        body: "Scripts, regex et Git. Le réflexe d’automatiser une tâche dès la deuxième fois, qui m’a mené tout droit au SOAR.",
+        serial: "Certifié",
       },
       {
         title: "Parti de l’offensif",
@@ -128,34 +169,9 @@ export const fr = {
         serial: "Changement de cap",
       },
       {
-        title: "QuotePilot",
-        body: "Un assistant IA de devis pour les petites entreprises de réparation. Étude de marché, business model et seuil de rentabilité, en équipe.",
-        serial: "2026",
-      },
-      {
-        title: "Support IA pour artisans",
-        body: "Un assistant agentique qui répond aux clients, réserve des créneaux et prend des commandes. Présenté en binôme au CESI.",
-        serial: "2026",
-      },
-      {
         title: "Securinets et IEEE TEK-UP",
         body: "Être là, et continuer à être là.",
         serial: "Membre",
-      },
-      {
-        title: "AWS Certified Security – Specialty",
-        body: "En préparation.",
-        serial: "Tirage en attente",
-      },
-      {
-        title: "CKA",
-        body: "En préparation.",
-        serial: "Tirage en attente",
-      },
-      {
-        title: "CyberDefenders Blue Team Level 1",
-        body: "En préparation.",
-        serial: "Tirage en attente",
       },
     ],
   },

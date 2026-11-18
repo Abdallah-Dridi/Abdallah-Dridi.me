@@ -2,6 +2,7 @@ export const stageIds = ["foot", "climb", "works", "tickets", "summit"] as const
 export type StageId = (typeof stageIds)[number];
 
 export const projectIds = [
+  "forenmate",
   "orchestryx",
   "latrodectus",
   "wirecat",
@@ -17,6 +18,16 @@ export const content = {
     github: "https://github.com/Abdallah-Dridi",
   },
   projects: {
+    forenmate: {
+      medium: [
+        "Python",
+        "Zeek",
+        "TShark",
+        "Volatility",
+        "The Sleuth Kit",
+        "LLM agents",
+      ],
+    },
     orchestryx: {
       medium: [
         "AWS",
@@ -47,15 +58,6 @@ export const content = {
       medium: ["Groq API", "LangChain", "RAG", "Hugging Face datasets"],
     },
   } satisfies Record<ProjectId, { medium: readonly string[] }>,
-  riskManagement: {
-    medium: ["EBIOS", "ISO 27005", "ALE", "ROSI", "WBS", "PERT", "EVM"],
-  },
-  certificationsEarned: [
-    "AWS Certified Solutions Architect – Associate",
-    "RHCSA",
-    "eJPT",
-    "Google IT Automation with Python",
-  ],
   cv: {
     en: "/cv/Abdallah-Dridi-CV-EN.pdf",
     fr: "/cv/Abdallah-Dridi-CV-FR.pdf",

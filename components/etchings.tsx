@@ -37,6 +37,50 @@ export function EtchingDefs() {
   );
 }
 
+function ForenMate({ labels }: EtchingProps) {
+  const evidence = [
+    { label: labels.pcap, tool: "Zeek, TShark", y: 30 },
+    { label: labels.disk, tool: "Sleuth Kit", y: 132 },
+    { label: labels.memory, tool: "Volatility", y: 234 },
+  ];
+  return (
+    <>
+      {evidence.map((item) => (
+        <g key={item.label}>
+          <path className="etch__box" d={`M12 ${item.y} H96 L112 ${item.y + 16} V${item.y + 60} H12 Z`} />
+          <path className="etch__box" d={`M96 ${item.y} V${item.y + 16} H112`} />
+          <text className="etch__text" x="20" y={item.y + 40}>{item.label}</text>
+          <Arrow d={`M112 ${item.y + 32} H136`} />
+          <rect className="etch__box" x="140" y={item.y + 6} width="112" height="52" />
+          <rect className="etch__inner" x="148" y={item.y + 14} width="96" height="36" />
+          <text className="etch__text" x="196" y={item.y + 37} textAnchor="middle">{item.tool}</text>
+          <Arrow d={`M252 ${item.y + 32} C 272 ${item.y + 32}, 272 170, 290 170`} />
+        </g>
+      ))}
+      <text className="etch__text" x="196" y="320" textAnchor="middle">{labels.isolated}</text>
+
+      <rect className="etch__box" x="294" y="120" width="120" height="100" />
+      <line className="etch__flow" x1="306" y1="196" x2="402" y2="196" />
+      {[316, 330, 338, 352, 368, 374, 392].map((x, i) => (
+        <line key={x} className="etch__flow" x1={x} y1="196" x2={x} y2={196 - [22, 40, 14, 56, 30, 48, 20][i]} />
+      ))}
+      <text className="etch__text" x="354" y="110" textAnchor="middle">{labels.timeline}</text>
+      <Arrow d="M414 170 H440" />
+
+      <circle className="etch__box" cx="466" cy="160" r="22" />
+      <circle className="etch__inner" cx="496" cy="178" r="22" fill="url(#etch-hatch)" />
+      <text className="etch__text" x="482" y="124" textAnchor="middle">{labels.agents}</text>
+      <Arrow d="M482 202 V244" />
+
+      <rect className="etch__box" x="428" y="248" width="112" height="56" />
+      <line className="etch__guide" x1="440" y1="266" x2="520" y2="266" />
+      <line className="etch__guide" x1="440" y1="280" x2="506" y2="280" />
+      <line className="etch__guide" x1="440" y1="294" x2="514" y2="294" />
+      <text className="etch__text" x="484" y="324" textAnchor="middle">{labels.findings}</text>
+    </>
+  );
+}
+
 function Orchestryx({ labels }: EtchingProps) {
   return (
     <>
@@ -199,6 +243,7 @@ function Kooretna({ labels }: EtchingProps) {
 }
 
 const drawings: Record<ProjectId, (props: EtchingProps) => React.JSX.Element> = {
+  forenmate: ForenMate,
   orchestryx: Orchestryx,
   latrodectus: Latrodectus,
   wirecat: WireCat,

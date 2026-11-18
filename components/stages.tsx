@@ -85,14 +85,6 @@ export function Climb() {
         ))}
       </ol>
 
-      <div className="carry">
-        <h3 className="carry__title">{t.carryTitle}</h3>
-        <ul className="carry__list">
-          {content.certificationsEarned.map((name) => (
-            <li key={name}>{name}</li>
-          ))}
-        </ul>
-      </div>
     </section>
   );
 }
@@ -136,18 +128,6 @@ export function Works() {
         );
       })}
 
-      <article className="wall wall--text" aria-labelledby="work-risk">
-        <div className="label">
-          <h3 id="work-risk" className="label__title">
-            {t.risk.title}
-          </h3>
-          <p className="label__category">{t.risk.category}</p>
-          <p className="label__medium">
-            {dictionary.common.medium}: {content.riskManagement.medium.join(", ")}
-          </p>
-          <p className="label__body">{t.risk.body}</p>
-        </div>
-      </article>
     </section>
   );
 }

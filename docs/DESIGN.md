@@ -128,7 +128,7 @@ memory dumps and network captures.
 View the repository             ← text link, underline on hover
 ```
 
-Projects: Orchestryx, Latrodectus, WireCat, Kooretna, plus a text-only wall for the risk-management study. Each drawing is an SVG "etching" in `components/etchings.tsx`.
+Projects, in order: ForenMate, Orchestryx, Latrodectus, WireCat, Kooretna. Each drawing is an SVG "etching" in `components/etchings.tsx`.
 
 No cards, no shadows, no rounded corners on walls. Labels have no border; they're type on stone.
 

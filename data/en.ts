@@ -62,12 +62,16 @@ export const en = {
         lesson: "Learning to explain the work, not only to do it.",
       },
     ],
-    carryTitle: "What I carry",
   },
   works: {
     title: "Works",
     lead: "Things I built to understand how they break.",
     items: {
+      forenmate: {
+        title: "ForenMate",
+        category: "DFIR and AI agents, team project in progress",
+        body: "One case workspace for PCAPs, disk images and memory dumps. Isolated workers extract the artifacts, normalize them into searchable events, and AI agents correlate network, disk and memory evidence into timelines, with every finding traced back to its source for the analyst.",
+      },
       orchestryx: {
         title: "Orchestryx",
         category: "Cloud security",
@@ -89,12 +93,14 @@ export const en = {
         body: "A football statistics assistant built on the Groq API and a RAG pipeline fed by sports APIs.",
       },
     },
-    risk: {
-      title: "Risk management study",
-      category: "Governance, academic",
-      body: "An EBIOS and ISO 27005 risk analysis with ALE and ROSI, a project charter, WBS, PERT and earned value management.",
-    },
     etch: {
+      isolated: "Isolated workers",
+      timeline: "Timeline",
+      agents: "AI agents",
+      findings: "Findings",
+      pcap: "PCAP",
+      disk: "Disk image",
+      memory: "Memory dump",
       request: "Request",
       queue: "Queue",
       workers: "Workers",
@@ -113,12 +119,47 @@ export const en = {
   },
   tickets: {
     title: "Tickets",
-    lead: "You can’t win without buying the ticket. Everything I tried, including what’s still a draw.",
+    lead: "You can’t win without buying the ticket. Every exam sat and every CTF entered, with what each one taught me.",
     items: [
       {
+        title: "eJPT",
+        body: "Taught me to work like an attacker: enumerate everything before touching anything, then pivot through a network one host at a time.",
+        serial: "Certified",
+      },
+      {
         title: "SudoSec CTF team",
-        body: "Competed at Securicon Tunisia.",
+        body: "Competed at Securicon Tunisia. Learned to split a board fast and trust teammates with the parts I can’t do.",
         serial: "2nd place",
+      },
+      {
+        title: "Securinets CTF, forensics",
+        body: "Static analysis of a remote-access trojan: strings, imports and config before ever running it.",
+        serial: "Forensics",
+      },
+      {
+        title: "SickSociety CTF, “hateme”",
+        body: "Docker layer forensics, unpacking a PyInstaller binary, decompiling Python bytecode, then reversing an LCG-based XOR stream cipher. One flag, five skills.",
+        serial: "Forensics",
+      },
+      {
+        title: "CI/CD Goat",
+        body: "Eleven challenges on poisoned pipeline execution, token escalation and supply-chain compromise. The build pipeline is part of the attack surface.",
+        serial: "11 challenges",
+      },
+      {
+        title: "RHCSA",
+        body: "Hands-on Linux administration under exam pressure: permissions, SELinux, systemd, storage. You defend a system better once you’ve built one.",
+        serial: "Certified",
+      },
+      {
+        title: "AWS Solutions Architect – Associate",
+        body: "VPCs, IAM and resilient design. Most cloud incidents start with a configuration choice, so that’s where security starts too.",
+        serial: "Certified",
+      },
+      {
+        title: "Google IT Automation with Python",
+        body: "Scripting, regex and Git. The habit of automating a task the second time I do it, which led straight to SOAR.",
+        serial: "Certified",
       },
       {
         title: "Started on offense",
@@ -126,34 +167,9 @@ export const en = {
         serial: "Changed direction",
       },
       {
-        title: "QuotePilot",
-        body: "An AI quote assistant for small repair businesses. Market study, business model and break-even, built as a team.",
-        serial: "2026",
-      },
-      {
-        title: "AI support for artisans",
-        body: "An agentic assistant that answers client questions, books sessions and takes orders. Pitched as a two-person project at CESI.",
-        serial: "2026",
-      },
-      {
         title: "Securinets and IEEE TEK-UP",
         body: "Showed up, kept showing up.",
         serial: "Member",
-      },
-      {
-        title: "AWS Certified Security – Specialty",
-        body: "Studying.",
-        serial: "Draw pending",
-      },
-      {
-        title: "CKA",
-        body: "Studying.",
-        serial: "Draw pending",
-      },
-      {
-        title: "CyberDefenders Blue Team Level 1",
-        body: "Studying.",
-        serial: "Draw pending",
       },
     ],
   },
